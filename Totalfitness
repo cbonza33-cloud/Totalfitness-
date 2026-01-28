@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Fitness Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background: #050505; color: white; font-family: 'Arial Black', sans-serif; }
+        .bein-purple { background: linear-gradient(135deg, #4d148c 0%, #1a0a2e 100%); }
+        .neon-border { border: 2px solid #a855f7; box-shadow: 0 0 15px #a855f7; }
+        .glass { background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
+    </style>
+</head>
+<body class="pb-24">
+
+    <nav class="p-4 border-b border-purple-900 flex justify-between items-center sticky top-0 bg-black/90 z-50">
+        <div>
+            <h1 class="font-black italic text-lg leading-none">TOTAL FITNESS ACADEMY</h1>
+            <p class="text-[9px] text-purple-400 tracking-widest uppercase">The World Cup of Aerobics</p>
+        </div>
+    </nav>
+
+    <section class="m-4 p-6 rounded-3xl bein-purple neon-border relative overflow-hidden">
+        <div class="relative z-10">
+            <h2 class="text-3xl font-black italic uppercase leading-none mb-1">WORLD CUP<br>2026</h2>
+            <p class="text-xs font-bold text-green-400 mb-4">JULY 25 @ KWAMASHU L HALL</p>
+            
+            <div id="countdown" class="flex justify-between text-center bg-black/30 p-3 rounded-2xl mb-4">
+                <div><span id="d" class="block text-2xl font-black">--</span><p class="text-[8px] uppercase">Days</p></div>
+                <div><span id="h" class="block text-2xl font-black">--</span><p class="text-[8px] uppercase">Hrs</p></div>
+                <div><span id="m" class="block text-2xl font-black text-purple-400">--</span><p class="text-[8px] uppercase">Min</p></div>
+                <div><span id="s" class="block text-2xl font-black text-red-500">--</span><p class="text-[8px] uppercase">Sec</p></div>
+            </div>
+
+            <button onclick="window.location.href='https://wa.me/27679818629?text=I%20want%20to%20buy%20a%20World%20Cup%20Ticket'" class="w-full bg-white text-black font-black py-4 rounded-full uppercase text-sm">
+                BUY EVENT TICKET - R300
+            </button>
+        </div>
+    </section>
+
+    <div class="px-4 mt-6">
+        <h3 class="text-xs font-bold text-gray-500 uppercase mb-4 tracking-widest">Academy Services</h3>
+        <div class="grid gap-3">
+            <div class="glass p-5 rounded-2xl flex justify-between items-center border-l-4 border-white">
+                <div>
+                    <p class="font-black italic">MONTHLY CLASSES</p>
+                    <p class="text-[10px] text-gray-400">Unlimited Aerobics & Gym</p>
+                </div>
+                <span class="text-xl font-black">R150</span>
+            </div>
+            <div class="glass p-5 rounded-2xl flex justify-between items-center border-l-4 border-purple-500">
+                <div>
+                    <p class="font-black italic">PERSONAL TRAINING</p>
+                    <p class="text-[10px] text-gray-400">1-on-1 Monthly Sessions</p>
+                </div>
+                <span class="text-xl font-black">R300</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="p-4 mt-6">
+        <h3 class="text-xs font-bold text-gray-500 uppercase mb-4 tracking-widest">Connect with Coaches</h3>
+        <div class="flex gap-2 overflow-x-auto pb-4">
+            <a href="https://wa.me/27679818629" class="glass min-w-[140px] p-4 rounded-xl text-center">
+                <p class="font-bold">Cbonza</p>
+                <p class="text-[9px] text-green-500 mt-1 uppercase font-bold">WhatsApp</p>
+            </a>
+            <a href="https://wa.me/27620296345" class="glass min-w-[140px] p-4 rounded-xl text-center">
+                <p class="font-bold">Lungisa</p>
+                <p class="text-[9px] text-green-500 mt-1 uppercase font-bold">WhatsApp</p>
+            </a>
+            <a href="https://wa.me/27625600946" class="glass min-w-[140px] p-4 rounded-xl text-center">
+                <p class="font-bold">Linda</p>
+                <p class="text-[9px] text-green-500 mt-1 uppercase font-bold">WhatsApp</p>
+            </a>
+        </div>
+    </div>
+
+    <nav class="fixed bottom-0 w-full bg-black/95 border-t border-purple-900 p-4 flex justify-around items-center z-50">
+        <button class="text-purple-500 font-bold">HOME</button>
+        <button onclick="window.location.href='https://wa.me/27679818629'" class="bg-green-600 p-4 rounded-full -mt-12 border-4 border-black font-black text-xl">💬</button>
+        <button onclick="alert('Location: 183 106341 - KwaMashu L Hall')" class="text-gray-500 font-bold">MAP</button>
+    </nav>
+
+    <script>
+        const eventDate = new Date("Jul 25, 2026 08:00:00").getTime();
+        setInterval(function() {
+            const now = new Date().getTime();
+            const diff = eventDate - now;
+            document.getElementById("d").innerHTML = Math.floor(diff / (1000 * 60 * 60 * 24));
+            document.getElementById("h").innerHTML = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            document.getElementById("m").innerHTML = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            document.getElementById("s").innerHTML = Math.floor((diff % (1000 * 60)) / 1000);
+        }, 1000);
+    </script>
+</body>
+</html>
