@@ -7,78 +7,58 @@
     <style>
         body { background-color: #1a1a1a; color: white; font-family: sans-serif; text-align: center; margin: 0; padding-bottom: 50px; }
         .header { background: linear-gradient(135deg, #4b0082, #000); padding: 30px 20px; border-bottom: 4px solid #FFD700; }
-        .logo-box { width: 80px; height: 80px; background: #FFD700; border-radius: 50%; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center; color: black; font-weight: bold; border: 3px solid white; font-size: 20px; }
-        h1 { color: #FFD700; margin: 0; font-size: 22px; }
-        .timer-bar { background: #FFD700; color: black; padding: 12px; font-weight: bold; font-size: 18px; margin: 15px 0; }
+        /* This is the Logo Dashboard you asked for */
+        .logo-dashboard { width: 90px; height: 90px; background: #FFD700; border-radius: 20px; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; color: black; font-weight: bold; border: 3px solid white; font-size: 22px; box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3); }
+        h1 { color: #FFD700; margin: 0; font-size: 22px; text-transform: uppercase; }
+        .timer-bar { background: #FFD700; color: black; padding: 12px; font-weight: bold; font-size: 18px; margin: 15px 0; border-y: 2px solid black; }
         .instructor-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; padding: 20px; }
-        .bio-card { background: #2d2d2d; border-radius: 15px; padding: 20px; border: 1px solid #444; position: relative; }
+        .bio-card { background: #2d2d2d; border-radius: 15px; padding: 20px; border: 1px solid #444; }
         .profile-img { width: 110px; height: 110px; border-radius: 50%; border: 3px solid #FFD700; margin-bottom: 10px; background: #555; object-fit: cover; }
-        .price-badge { background: #4b0082; color: #FFD700; padding: 4px 12px; border-radius: 15px; font-size: 12px; border: 1px solid #FFD700; margin-bottom: 10px; display: inline-block; }
-        .socials { margin: 10px 0; display: flex; justify-content: center; gap: 10px; }
-        .socials a { color: #FFD700; text-decoration: none; font-size: 13px; border: 1px solid #555; padding: 3px 8px; border-radius: 4px; }
-        .btn-wa { display: block; background: #25D366; color: white; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 10px; }
+        .price-tag { background: #4b0082; color: #FFD700; padding: 5px 15px; border-radius: 20px; font-size: 13px; border: 1px solid #FFD700; margin: 10px 0; display: inline-block; }
+        .btn-wa { display: block; background: #25D366; color: white; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        .socials a { color: #FFD700; text-decoration: none; margin: 0 8px; font-size: 14px; opacity: 0.8; }
     </style>
 </head>
 <body>
 
 <div class="header">
-    <div class="logo-box">TFA</div>
-    <h1>TOTAL FITNESS ACADEMY</h1>
-    <div style="font-style: italic; color: #ccc;">"Eyomphakathi"</div>
+    <div class="logo-dashboard">TFA</div> <h1>TOTAL FITNESS ACADEMY</h1>
+    <div style="font-style: italic; color: #eee; margin-top: 5px;">"Eyomphakathi"</div>
 </div>
 
-<div class="timer-bar" id="countdown">Loading Event Timer...</div>
+<div class="timer-bar" id="countdown">🏆 LOADING WORLD CUP TIMER...</div>
 
-<div style="padding: 10px;">
-    <h3 style="color: #FFD700;">WORLD CUP INSTRUCTORS & TICKETS</h3>
-    <div class="instructor-grid">
-        <div class="bio-card">
-            <img src="cbonza.jpg" class="profile-img" alt="Coach Cbonza">
-            <div style="font-weight:bold; font-size:20px; color:#FFD700;">COACH CBONZA</div>
-            <div class="price-badge">EARLY BIRD R150 | GEN R200</div>
-            <p style="font-size:14px;">Midway Crossing & KwaMashu Station</p>
-            <div class="socials">
-                <a href="#">Facebook</a><a href="#">Instagram</a><a href="#">TikTok</a>
-            </div>
-            <a href="https://wa.me/27679818818" class="btn-wa">WhatsApp Coach</a>
-        </div>
+<div class="instructor-grid">
+    <div class="bio-card">
+        <img src="cbonza.jpg" class="profile-img" alt="Cbonza">
+        <div style="font-weight:bold; font-size:22px; color:#FFD700;">COACH CBONZA</div>
+        <div class="price-tag">R150 | R200 | R250</div>
+        <p style="font-size:14px; line-height:1.4;"><b>Branch:</b> K Section<br>(Sandwiched between Midway Crossing & KwaMashu Station)</p>
+        <div class="socials"><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">TikTok</a></div>
+        <a href="https://wa.me/27679818818" class="btn-wa">Direct WhatsApp</a>
+    </div>
 
-        <div class="bio-card">
-            <img src="lungisa.jpg" class="profile-img" alt="Coach Lungisa">
-            <div style="font-weight:bold; font-size:20px; color:#FFD700;">COACH LUNGISA</div>
-            <div class="price-badge">GEN R200 | VIP R250</div>
-            <p style="font-size:14px;">Bridge City Shopping Centre</p>
-            <div class="socials">
-                <a href="#">Facebook</a><a href="#">Instagram</a><a href="#">TikTok</a>
-            </div>
-            <a href="https://wa.me/27767981818" class="btn-wa">WhatsApp Coach</a>
-        </div>
-
-        <div class="bio-card">
-            <img src="linda.jpg" class="profile-img" alt="Coach Linda">
-            <div style="font-weight:bold; font-size:20px; color:#FFD700;">COACH LINDA</div>
-            <div class="price-badge">GEN R200 | VIP R250</div>
-            <p style="font-size:14px;">Near Midway Crossing Mall</p>
-            <div class="socials">
-                <a href="#">Facebook</a><a href="#">Instagram</a><a href="#">TikTok</a>
-            </div>
-            <a href="https://wa.me/27679818818" class="btn-wa">WhatsApp Coach</a>
-        </div>
+    <div class="bio-card">
+        <img src="lungisa.jpg" class="profile-img" alt="Lungisa">
+        <div style="font-weight:bold; font-size:22px; color:#FFD700;">COACH LUNGISA</div>
+        <div class="price-tag">R150 | R200 | R250</div>
+        <p style="font-size:14px;"><b>Branch:</b> Near Bridge City Shopping Centre</p>
+        <div class="socials"><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">TikTok</a></div>
+        <a href="https://wa.me/27767981818" class="btn-wa">Direct WhatsApp</a>
     </div>
 </div>
 
 <script>
-    function startTimer() {
+    function updateTimer() {
         const target = new Date("July 25, 2026 08:00:00").getTime();
-        setInterval(() => {
-            const now = new Date().getTime();
-            const diff = target - now;
-            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            document.getElementById("countdown").innerHTML = `🏆 WORLD CUP STARTS IN: ${d}d ${h}h`;
-        }, 1000);
+        const now = new Date().getTime();
+        const diff = target - now;
+        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        document.getElementById("countdown").innerHTML = `🏆 WORLD CUP STARTS IN: ${d} DAYS ${h} HOURS`;
     }
-    startTimer();
+    setInterval(updateTimer, 1000);
+    updateTimer();
 </script>
 
 </body>
