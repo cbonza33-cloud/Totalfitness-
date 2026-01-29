@@ -1,85 +1,90 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TFA - World Cup Dashboard</title>
+    <title>TFA | World Cup Dashboard</title>
     <style>
-        body { background-color: #0d0d0d; color: white; font-family: 'Arial', sans-serif; margin: 0; }
+        body { background-color: #0f0f0f; color: #ffffff; font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; }
         
-        /* BEIN SPORT STYLE DASHBOARD */
-        .header-dashboard { background: #4b0082; padding: 20px; border-bottom: 5px solid #FFD700; display: flex; align-items: center; justify-content: center; flex-direction: column; }
-        .main-logo { width: 180px; margin-bottom: 10px; filter: drop-shadow(0 0 10px rgba(138, 43, 226, 0.8)); }
+        /* beIN SPORTS Style Header */
+        .bein-header { background: #4b0082; padding: 15px; border-bottom: 3px solid #dcdcdc; display: flex; align-items: center; justify-content: center; flex-direction: column; box-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+        .main-logo { width: 220px; filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.7)); }
         
-        .timer-banner { background: #FFD700; color: black; padding: 10px; font-weight: 900; font-size: 22px; text-transform: uppercase; letter-spacing: 1px; }
-        .sub-banner { background: #1a1a1a; color: #FFD700; padding: 5px; font-size: 14px; letter-spacing: 3px; border-bottom: 1px solid #333; }
+        .timer-banner { background: #ffffff; color: #4b0082; padding: 8px; font-weight: 800; font-size: 20px; text-transform: uppercase; letter-spacing: 2px; text-shadow: 0.5px 0.5px 0px rgba(0,0,0,0.1); }
+        .live-tag { background: #ff0000; color: white; padding: 2px 8px; border-radius: 3px; font-size: 12px; margin-right: 10px; vertical-align: middle; animation: blink 1.5s infinite; }
+        
+        @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
 
-        .instructor-grid { padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
-        .coach-card { background: #1a1a1a; border-left: 6px solid #4b0082; border-radius: 4px; padding: 25px; text-align: left; transition: 0.3s; }
-        .coach-card:hover { border-left-color: #FFD700; background: #222; }
+        .instructor-grid { padding: 30px 15px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+        .coach-card { background: #1a1a1a; border-top: 4px solid #4b0082; border-radius: 2px; padding: 20px; text-align: left; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
         
-        .coach-title { color: #FFD700; font-size: 26px; font-weight: 800; margin: 0; }
-        .price-info { color: #fff; font-size: 15px; margin: 10px 0; background: rgba(75, 0, 130, 0.3); padding: 5px; display: inline-block; }
+        .coach-title { color: #ffffff; font-size: 22px; font-weight: 700; border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 15px; }
+        .price-row { color: #4b0082; background: #f0f0f0; font-size: 14px; font-weight: bold; padding: 5px 10px; display: inline-block; margin-bottom: 15px; }
         
-        .location-box { font-size: 14px; color: #bbb; line-height: 1.5; margin: 15px 0; border-top: 1px solid #333; padding-top: 10px; }
+        .location-info { font-size: 14px; color: #aaa; line-height: 1.6; border-left: 2px solid #4b0082; padding-left: 10px; margin: 15px 0; }
         
-        /* FIXED WHATSAPP BUTTON */
-        .btn-wa { display: block; background: #25D366; color: white; padding: 15px; text-align: center; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 16px; margin-top: 15px; }
+        /* WHATSAPP BUTTON - Professional Green */
+        .btn-wa { display: block; background: #25D366; color: white; padding: 14px; text-align: center; text-decoration: none; font-weight: bold; font-size: 15px; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+        .btn-wa:hover { background: #1ebe57; }
     </style>
 </head>
 <body>
 
-<div class="header-dashboard">
-    <img src="https://i.ibb.co/S769L6mG/image.png" alt="Total Fitness Academy Logo" class="main-logo">
-    <div style="font-weight: bold; color: #FFD700; font-size: 18px;">EYOMPHAKATHI</div>
+<div class="bein-header">
+    <img src="https://i.ibb.co/S769L6mG/image.png" alt="TFA Logo" class="main-logo">
+    <div style="font-weight: 400; color: #ffffff; font-size: 14px; letter-spacing: 4px; margin-top: 5px;">EYOMPHAKATHI</div>
 </div>
 
-<div class="sub-banner">WORLD CUP OF AEROBICS DASHBOARD</div>
-<div class="timer-banner" id="timer">LIVE COUNTDOWN LOADING...</div>
+<div class="timer-banner" id="timer"><span class="live-tag">LIVE</span> LOADING COUNTDOWN...</div>
 
 <div class="instructor-grid">
     <div class="coach-card">
         <div class="coach-title">COACH CBONZA</div>
-        <div class="price-info">TICKETS: R150 | R200 | R250</div>
-        <div class="location-box">
-            <b>Branch:</b> K Section<br>
-            (Sandwiched between Midway Crossing & KwaMashu Station)
+        <div class="price-row">TICKET: R150 | R200 | R250</div>
+        <div class="location-info">
+            <b>BRANCH: K SECTION</b><br>
+            Sandwiched between Midway Crossing & KwaMashu Station
         </div>
-        <a href="https://wa.me/27679818818" class="btn-wa">WHATSAPP COACH</a>
+        <a href="https://wa.me/27679818818" class="btn-wa">Direct WhatsApp</a>
     </div>
 
     <div class="coach-card">
         <div class="coach-title">COACH LUNGISA</div>
-        <div class="price-info">TICKETS: R150 | R200 | R250</div>
-        <div class="location-box">
-            <b>Branch:</b> Near Bridge City Shopping Centre
+        <div class="price-row">TICKET: R150 | R200 | R250</div>
+        <div class="location-info">
+            <b>BRANCH: BRIDGE CITY</b><br>
+            Near Bridge City Shopping Centre
         </div>
-        <a href="https://wa.me/27767981818" class="btn-wa">WHATSAPP COACH</a>
+        <a href="https://wa.me/27767981818" class="btn-wa">Direct WhatsApp</a>
     </div>
 
     <div class="coach-card">
         <div class="coach-title">COACH LINDA</div>
-        <div class="price-info">TICKETS: R150 | R200 | R250</div>
-        <div class="location-box">
-            <b>Branch:</b> Near Midway Crossing Mall
+        <div class="price-row">TICKET: R150 | R200 | R250</div>
+        <div class="location-info">
+            <b>BRANCH: MIDWAY</b><br>
+            Near Midway Crossing Mall
         </div>
-        <a href="https://wa.me/27679818818" class="btn-wa">WHATSAPP COACH</a>
+        <a href="https://wa.me/27679818818" class="btn-wa">Direct WhatsApp</a>
     </div>
 </div>
 
 <script>
-    function runTimer() {
+    function updateTimer() {
         const target = new Date("July 25, 2026 08:00:00").getTime();
-        setInterval(() => {
-            const now = new Date().getTime();
-            const diff = target - now;
-            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            document.getElementById("timer").innerHTML = `LIVE START IN: ${d}D : ${h}H`;
-        }, 1000);
+        const now = new Date().getTime();
+        const diff = target - now;
+        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        document.getElementById("timer").innerHTML = `<span class="live-tag">LIVE</span> WORLD CUP STARTS IN: ${d}D : ${h}H`;
     }
-    runTimer();
+    setInterval(updateTimer, 1000);
+    updateTimer();
 </script>
 
 </body>
 </html>
+
+
