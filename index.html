@@ -7,7 +7,6 @@
     <style>
         body { background-color: #1a1a1a; color: white; font-family: sans-serif; text-align: center; margin: 0; padding-bottom: 50px; }
         .header { background: linear-gradient(135deg, #4b0082, #000); padding: 30px 20px; border-bottom: 4px solid #FFD700; }
-        /* Your Logo Dashboard */
         .logo-dash { width: 90px; height: 90px; background: #FFD700; border-radius: 15px; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center; color: black; font-weight: bold; border: 3px solid white; font-size: 20px; box-shadow: 0 0 15px rgba(255, 215, 0, 0.4); }
         h1 { color: #FFD700; margin: 0; font-size: 22px; text-transform: uppercase; }
         .timer-bar { background: #FFD700; color: black; padding: 12px; font-weight: bold; font-size: 18px; margin: 15px 0; }
@@ -16,7 +15,6 @@
         .profile-img { width: 110px; height: 110px; border-radius: 50%; border: 3px solid #FFD700; margin-bottom: 10px; background: #555; object-fit: cover; }
         .price-tag { background: #4b0082; color: #FFD700; padding: 5px 12px; border-radius: 20px; font-size: 13px; border: 1px solid #FFD700; margin: 10px 0; display: inline-block; }
         .btn-wa { display: block; background: #25D366; color: white; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 15px; }
-        .socials a { color: #FFD700; text-decoration: none; margin: 0 10px; font-size: 14px; }
     </style>
 </head>
 <body>
@@ -35,7 +33,6 @@
         <div style="font-weight:bold; font-size:22px; color:#FFD700;">COACH CBONZA</div>
         <div class="price-tag">TICKET: R150 | R200 | R250</div>
         <p style="font-size:14px;"><b>K Section Branch:</b> Sandwiched between Midway Crossing and KwaMashu Station</p>
-        <div class="socials"><a href="#">Facebook</a><a href="#">TikTok</a></div>
         <a href="https://wa.me/27679818818" class="btn-wa">Direct WhatsApp</a>
     </div>
 
@@ -44,23 +41,21 @@
         <div style="font-weight:bold; font-size:22px; color:#FFD700;">COACH LUNGISA</div>
         <div class="price-tag">TICKET: R150 | R200 | R250</div>
         <p style="font-size:14px;"><b>Branch:</b> Near Bridge City Shopping Centre</p>
-        <div class="socials"><a href="#">Facebook</a><a href="#">TikTok</a></div>
         <a href="https://wa.me/27767981818" class="btn-wa">Direct WhatsApp</a>
     </div>
 </div>
 
 <script>
-    function startTimer() {
+    function updateTimer() {
         const target = new Date("July 25, 2026 08:00:00").getTime();
-        setInterval(() => {
-            const now = new Date().getTime();
-            const diff = target - now;
-            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            document.getElementById("countdown").innerHTML = `🏆 WORLD CUP STARTS IN: ${d}d ${h}h`;
-        }, 1000);
+        const now = new Date().getTime();
+        const diff = target - now;
+        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        document.getElementById("countdown").innerHTML = `🏆 WORLD CUP STARTS IN: ${d}d ${h}h`;
     }
-    startTimer();
+    setInterval(updateTimer, 1000);
+    updateTimer();
 </script>
 
 </body>
