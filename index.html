@@ -6,57 +6,79 @@
     <title>TFA - World Cup Of Aerobics</title>
     <style>
         body { background-color: #1a1a1a; color: white; font-family: sans-serif; text-align: center; margin: 0; padding-bottom: 50px; }
-        .header { background: linear-gradient(135deg, #4b0082, #000); padding: 40px 20px; border-bottom: 4px solid #FFD700; }
-        h1 { color: #FFD700; margin: 0; font-size: 28px; text-transform: uppercase; }
-        .slogan { color: #fff; font-style: italic; font-size: 18px; letter-spacing: 2px; margin-top: 5px; }
-        .event-theme { background: #FFD700; color: #000; padding: 10px; font-weight: bold; margin-top: 20px; display: inline-block; border-radius: 5px; }
-        .instructor-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; padding: 20px; max-width: 1200px; margin: 0 auto; }
-        .bio-card { background: #2d2d2d; border-radius: 15px; padding: 15px; border: 1px solid #444; text-align: left; transition: 0.3s; }
-        .bio-card:hover { border-color: #FFD700; }
-        .bio-name { color: #FFD700; font-weight: bold; font-size: 18px; }
-        .bio-text { font-size: 14px; color: #ccc; margin-top: 5px; }
-        .btn-wa { display: block; background: #25D366; color: white; padding: 10px; margin-top: 15px; border-radius: 5px; text-decoration: none; font-weight: bold; text-align: center; }
+        .header { background: linear-gradient(135deg, #4b0082, #000); padding: 30px 20px; border-bottom: 4px solid #FFD700; }
+        .logo-box { width: 80px; height: 80px; background: #FFD700; border-radius: 50%; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center; color: black; font-weight: bold; border: 3px solid white; font-size: 20px; }
+        h1 { color: #FFD700; margin: 0; font-size: 22px; }
+        .timer-bar { background: #FFD700; color: black; padding: 12px; font-weight: bold; font-size: 18px; margin: 15px 0; }
+        .instructor-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; padding: 20px; }
+        .bio-card { background: #2d2d2d; border-radius: 15px; padding: 20px; border: 1px solid #444; position: relative; }
+        .profile-img { width: 110px; height: 110px; border-radius: 50%; border: 3px solid #FFD700; margin-bottom: 10px; background: #555; object-fit: cover; }
+        .price-badge { background: #4b0082; color: #FFD700; padding: 4px 12px; border-radius: 15px; font-size: 12px; border: 1px solid #FFD700; margin-bottom: 10px; display: inline-block; }
+        .socials { margin: 10px 0; display: flex; justify-content: center; gap: 10px; }
+        .socials a { color: #FFD700; text-decoration: none; font-size: 13px; border: 1px solid #555; padding: 3px 8px; border-radius: 4px; }
+        .btn-wa { display: block; background: #25D366; color: white; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 10px; }
     </style>
 </head>
 <body>
 
 <div class="header">
-    <h1>TOTAL FITNESS ACADEMY (TFA)</h1>
-    <div class="slogan">"Eyomphakathi"</div>
-    <div class="event-theme">🏆 THEME: WORLD CUP OF AEROBICS 🏆</div>
+    <div class="logo-box">TFA</div>
+    <h1>TOTAL FITNESS ACADEMY</h1>
+    <div style="font-style: italic; color: #ccc;">"Eyomphakathi"</div>
 </div>
 
-<div style="padding: 20px;">
-    <h2 style="color: #FFD700;">MEET THE 30 LEAD INSTRUCTORS</h2>
-    <div class="instructor-grid" id="mainGrid">
+<div class="timer-bar" id="countdown">Loading Event Timer...</div>
+
+<div style="padding: 10px;">
+    <h3 style="color: #FFD700;">WORLD CUP INSTRUCTORS & TICKETS</h3>
+    <div class="instructor-grid">
         <div class="bio-card">
-            <div class="bio-name">COACH CBONZA</div>
-            <div class="bio-text">Branch: Between Midway Crossing & KwaMashu Station.</div>
-            <a href="https://wa.me/27679818818" class="btn-wa">Chat on WhatsApp</a>
+            <img src="cbonza.jpg" class="profile-img" alt="Coach Cbonza">
+            <div style="font-weight:bold; font-size:20px; color:#FFD700;">COACH CBONZA</div>
+            <div class="price-badge">EARLY BIRD R150 | GEN R200</div>
+            <p style="font-size:14px;">Midway Crossing & KwaMashu Station</p>
+            <div class="socials">
+                <a href="#">Facebook</a><a href="#">Instagram</a><a href="#">TikTok</a>
+            </div>
+            <a href="https://wa.me/27679818818" class="btn-wa">WhatsApp Coach</a>
         </div>
+
         <div class="bio-card">
-            <div class="bio-name">COACH LUNGISA</div>
-            <div class="bio-text">Branch: Near Bridge City Shopping Centre.</div>
-            <a href="https://wa.me/27767981818" class="btn-wa">Chat on WhatsApp</a>
+            <img src="lungisa.jpg" class="profile-img" alt="Coach Lungisa">
+            <div style="font-weight:bold; font-size:20px; color:#FFD700;">COACH LUNGISA</div>
+            <div class="price-badge">GEN R200 | VIP R250</div>
+            <p style="font-size:14px;">Bridge City Shopping Centre</p>
+            <div class="socials">
+                <a href="#">Facebook</a><a href="#">Instagram</a><a href="#">TikTok</a>
+            </div>
+            <a href="https://wa.me/27767981818" class="btn-wa">WhatsApp Coach</a>
         </div>
+
         <div class="bio-card">
-            <div class="bio-name">COACH LINDA</div>
-            <div class="bio-text">Branch: Near Midway Crossing Mall.</div>
-            <a href="https://wa.me/27679818818" class="btn-wa">Chat on WhatsApp</a>
+            <img src="linda.jpg" class="profile-img" alt="Coach Linda">
+            <div style="font-weight:bold; font-size:20px; color:#FFD700;">COACH LINDA</div>
+            <div class="price-badge">GEN R200 | VIP R250</div>
+            <p style="font-size:14px;">Near Midway Crossing Mall</p>
+            <div class="socials">
+                <a href="#">Facebook</a><a href="#">Instagram</a><a href="#">TikTok</a>
+            </div>
+            <a href="https://wa.me/27679818818" class="btn-wa">WhatsApp Coach</a>
         </div>
     </div>
 </div>
 
 <script>
-    const grid = document.getElementById('mainGrid');
-    for (let i = 4; i <= 30; i++) {
-        grid.innerHTML += `
-            <div class="bio-card">
-                <div style="height:100px; background:#444; border-radius:8px; margin-bottom:10px; display:flex; align-items:center; justify-content:center; color:#888;">PHOTO</div>
-                <div class="bio-name">INSTRUCTOR ${i}</div>
-                <div class="bio-text">Official team member for the World Cup of Aerobics. Details coming soon!</div>
-            </div>`;
+    function startTimer() {
+        const target = new Date("July 25, 2026 08:00:00").getTime();
+        setInterval(() => {
+            const now = new Date().getTime();
+            const diff = target - now;
+            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            document.getElementById("countdown").innerHTML = `🏆 WORLD CUP STARTS IN: ${d}d ${h}h`;
+        }, 1000);
     }
+    startTimer();
 </script>
 
 </body>
