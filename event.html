@@ -3,37 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TFA | Annual World Cup</title>
+    <title>TFA | Instructor Dashboard</title>
     <style>
-        body { background: #050505; color: white; font-family: sans-serif; text-align: center; margin: 0; padding-bottom: 50px; }
-        .header { background: #4b0082; padding: 30px; border-bottom: 2px solid #fff; }
-        .event-card { background: #111; padding: 25px; border-radius: 8px; border: 1px solid #4b0082; margin: 20px auto; max-width: 500px; }
-        .qr-box { background: white; padding: 15px; width: 180px; margin: 20px auto; border-radius: 10px; }
-        .back-btn { color: white; text-decoration: none; border: 1px solid white; padding: 10px 20px; display: inline-block; margin-top: 20px; font-weight: bold; }
+        body { background: radial-gradient(circle at center, #1a0033 0%, #050505 100%); color: #ffffff; font-family: 'Segoe UI', sans-serif; margin: 0; padding-bottom: 50px; }
+        .header-bein { background: linear-gradient(135deg, #4b0082, #2e004f); padding: 20px; border-bottom: 3px solid #c0c0c0; text-align: center; }
+        .logo-main { width: 180px; }
+        .dash-banner { background: #f8f8f8; color: #4b0082; padding: 10px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; text-align: center; }
+        .container { padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .coach-card { background: rgba(20, 20, 20, 0.9); border: 1px solid #333; border-top: 4px solid #4b0082; padding: 20px; border-radius: 4px; text-align: center; }
+        .id-photo { width: 105px; height: 140px; border: 2px solid #c0c0c0; margin: 0 auto 15px; object-fit: cover; background: #2a2a2a; display: block; }
+        .coach-title { font-size: 20px; font-weight: 800; margin-bottom: 10px; }
+        .schedule-table { width: 100%; font-size: 12px; margin: 10px 0; border-collapse: collapse; }
+        .schedule-table td { padding: 6px 0; border-bottom: 1px solid #222; text-align: left; }
+        .time-slot { color: #4b0082; background: #e0e0e0; font-weight: bold; padding: 2px 5px; border-radius: 2px; }
+        .price-text { color: #25D366; font-weight: bold; float: right; }
+        .btn-wa { display: block; background: #25D366; color: #fff; text-align: center; padding: 12px; text-decoration: none; font-weight: 700; border-radius: 2px; font-size: 13px; margin-top: 10px; }
+        .nav-link { color: white; font-weight: bold; text-decoration: none; border: 1px solid white; padding: 10px 20px; display: inline-block; margin-top: 20px; }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>ANNUAL WORLD CUP EVENT</h1>
-        <p style="letter-spacing: 5px; color: #c0c0c0;">TOTAL FITNESS ACADEMY</p>
+<div class="header-bein"><img src="https://i.ibb.co/S769L6mG/image.png" alt="TFA Logo" class="logo-main"></div>
+<div class="dash-banner">OFFICIAL INSTRUCTOR ROSTER</div>
+<div class="container">
+    <div class="coach-card">
+        <img src="cbonza.png" alt="ID Photo" class="id-photo">
+        <div class="coach-title">COACH CBONZA</div>
+        <table class="schedule-table">
+            <tr><td><span class="time-slot">05:00-06:00 AM</span> Mon-Sat</td><td><span class="price-text">R250</span></td></tr>
+            <tr><td><span class="time-slot">17:00-19:00 PM</span> Mon-Thu</td><td><span class="price-text">R150</span></td></tr>
+        </table>
+        <a href="https://wa.me/27679818629" class="btn-wa">WHATSAPP COACH</a>
     </div>
-    <div style="padding: 20px;">
-        <a href="index.html" class="back-btn">← BACK TO COACHES</a>
-        <div class="event-card">
-            <h3>📍 VENUE</h3>
-            <p style="font-size: 20px;">KwaMashu L Community Hall</p>
-            <h3>📅 DATE</h3>
-            <p style="font-size: 20px;">25 July 2026</p>
-            <h3>⏰ TIME</h3>
-            <p style="font-size: 20px;">08:00 AM - 20:00 PM</p>
-        </div>
-        <h3 style="margin-top:40px;">REGISTRATION QR</h3>
-        <div class="qr-box">
-            <img src="qrcode.png" alt="Registration QR Code" style="width:100%;">
-            <p style="color:black; font-size:10px; margin-top:5px; font-weight:bold;">SCAN TO JOIN</p>
-        </div>
-        <h2 style="border-bottom: 2px solid #4b0082; padding-bottom:10px; margin-top: 50px;">GUEST INSTRUCTORS</h2>
-        <p style="color:#666; font-style: italic;">Profile photos and bios coming soon...</p>
+    <div class="coach-card">
+        <img src="lungisa.png" alt="ID Photo" class="id-photo">
+        <div class="coach-title">COACH LUNGISA</div>
+        <p style="font-size:10px; color:#aaa; margin-bottom:10px;">KwaMashu E Section ScoutHall</p>
+        <table class="schedule-table">
+            <tr><td><span class="time-slot">18:00-19:00 PM</span> Mon-Thu</td><td><span class="price-text">R200</span></td></tr>
+        </table>
+        <a href="https://wa.me/27620296345" class="btn-wa">WHATSAPP COACH</a>
     </div>
+    <div class="coach-card">
+        <img src="linda.png" alt="ID Photo" class="id-photo">
+        <div class="coach-title">COACH LINDA</div>
+        <p style="font-size:10px; color:#aaa; margin-bottom:10px;">Newlands West Near Midways Crossing</p>
+        <table class="schedule-table">
+            <tr><td><span class="time-slot">18:00-19:00 PM</span> Mon-Thu</td><td><span class="price-text">R250</span></td></tr>
+        </table>
+        <a href="https://wa.me/27625600946" class="btn-wa">WHATSAPP COACH</a>
+    </div>
+</div>
+<center><a href="event.html" class="nav-link">VIEW ANNUAL EVENT DETAILS →</a></center>
 </body>
 </html>
