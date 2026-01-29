@@ -13,7 +13,33 @@
 </head>
 <body class="pb-24">
     <header class="p-5 border-b border-purple-900 bg-black">
-        <h1 class="font-black italic text-xl uppercase leading-none">TOTAL FITNESS ACADEMY</h1>
+        <h1 class="font-black italic text-xl uppercase leading-none"><style>
+    .brand-header {
+        background: linear-gradient(135deg, #4b0082, #000000);
+        padding: 20px;
+        text-align: center;
+        border-bottom: 3px solid #FFD700; /* Gold Border */
+    }
+    .brand-title {
+        color: #FFD700; /* Gold Text */
+        font-family: 'Arial Black', sans-serif;
+        font-size: 24px;
+        text-transform: uppercase;
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    .brand-subtitle {
+        color: white;
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+</style>
+
+<div class="brand-header">
+    <h1 class="brand-title">TOTAL FITNESS ACADEMY (TFA) 🇿🇦</h1>
+    <div class="brand-subtitle">PRECISION • POWER • PERFORMANCE</div>
+</div>
+</h1>
         <p class="text-[10px] text-purple-400 font-bold tracking-widest uppercase">World Cup Of Aerobics</p>
     </header>
 
