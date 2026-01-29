@@ -3,85 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TFA | Elite World Cup Dashboard</title>
+    <title>TFA | Class Schedules</title>
     <style>
         body { background-color: #080808; color: #ffffff; font-family: 'Segoe UI', sans-serif; margin: 0; }
-        
-        /* beIN SPORTS STYLE HEADER */
         .header-bein { background: linear-gradient(135deg, #4b0082, #2e004f); padding: 30px 15px; border-bottom: 2px solid #c0c0c0; text-align: center; }
         .logo-main { width: 220px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.6)); }
-        
         .dash-banner { background: #ffffff; color: #4b0082; padding: 12px; font-weight: 900; font-size: 16px; text-transform: uppercase; letter-spacing: 2px; text-align: center; }
-        .live-dot { color: #ff0000; margin-right: 8px; animation: pulse 1.5s infinite; }
-        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
-
-        .container { padding: 25px 15px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
-        
-        .coach-card { background: #121212; border: 1px solid #222; border-top: 5px solid #4b0082; padding: 20px; }
-        .coach-title { font-size: 24px; font-weight: 800; color: #ffffff; margin-bottom: 5px; text-transform: uppercase; }
-        .price-row { color: #a0a0a0; font-size: 13px; font-weight: bold; margin-bottom: 15px; letter-spacing: 1px; }
-        
-        .location-box { font-size: 14px; color: #cccccc; border-left: 2px solid #4b0082; padding-left: 12px; line-height: 1.6; margin: 20px 0; }
-        
-        .btn-wa { display: block; background: #25D366; color: #fff; text-align: center; padding: 15px; text-decoration: none; font-weight: 700; text-transform: uppercase; font-size: 14px; border-radius: 2px; }
+        .container { padding: 25px 15px; display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 25px; }
+        .coach-card { background: #121212; border: 1px solid #222; border-top: 5px solid #4b0082; padding: 20px; border-radius: 4px; text-align: center; }
+        .coach-img { width: 120px; height: 120px; border-radius: 50%; border: 3px solid #4b0082; margin-bottom: 15px; object-fit: cover; background: #333; }
+        .coach-title { font-size: 24px; font-weight: 800; margin-bottom: 10px; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        .schedule-table { width: 100%; font-size: 13px; margin-bottom: 20px; text-align: left; }
+        .time-slot { color: #4b0082; background: #f0f0f0; font-weight: 800; padding: 3px 8px; border-radius: 2px; }
+        .price-text { color: #25D366; font-weight: bold; float: right; }
+        .btn-wa { display: block; background: #25D366; color: #fff; text-align: center; padding: 12px; text-decoration: none; font-weight: 700; border-radius: 2px; }
+        .nav-link { display: inline-block; margin-top: 20px; color: #ffffff; text-decoration: underline; font-weight: bold; }
     </style>
 </head>
 <body>
 
 <div class="header-bein">
-    <img src="https://i.ibb.co/S769L6mG/image.png" alt="Total Fitness Academy Logo" class="logo-main">
-    <div style="color: #c0c0c0; font-size: 12px; letter-spacing: 5px; margin-top: 10px; font-weight: 300;">EYOMPHAKATHI</div>
+    <img src="https://i.ibb.co/S769L6mG/image.png" alt="TFA Logo" class="logo-main">
 </div>
 
-<div class="dash-banner" id="countdown">
-    <span class="live-dot">● LIVE</span> WORLD CUP STARTS IN: LOADING...
-</div>
+<div class="dash-banner">● WORLD CUP SCHEDULES</div>
 
 <div class="container">
     <div class="coach-card">
+        <img src="cbonza.png" alt="Coach Cbonza" class="coach-img">
         <div class="coach-title">COACH CBONZA</div>
-        <div class="price-row">TICKET: R150 | R200 | R250</div>
-        <div class="location-box">
-            <b>BRANCH: K SECTION</b><br>
-            Sandwiched between Midway Crossing & KwaMashu Station
-        </div>
-        <a href="https://wa.me/27679818629" class="btn-wa">Direct WhatsApp</a>
+        <table class="schedule-table">
+            <tr><td><span class="time-slot">05:00-06:00 AM</span> Mon-Sat</td><td><span class="price-text">R250</span></td></tr>
+            <tr><td><span class="time-slot">17:00-19:00 PM</span> Mon-Thu</td><td><span class="price-text">R150</span></td></tr>
+        </table>
+        <a href="https://wa.me/27679818629" class="btn-wa">WhatsApp Coach</a>
     </div>
 
     <div class="coach-card">
+        <img src="lungisa.png" alt="Coach Lungisa" class="coach-img">
         <div class="coach-title">COACH LUNGISA</div>
-        <div class="price-row">TICKET: R150 | R200 | R250</div>
-        <div class="location-box">
-            <b>BRANCH: BRIDGE CITY</b><br>
-            Near Bridge City Shopping Centre
-        </div>
-        <a href="https://wa.me/27767981818" class="btn-wa">Direct WhatsApp</a>
+        <p style="font-size:12px; color:#aaa;">E Section Scout Hall (Near Bridge City)</p>
+        <table class="schedule-table">
+            <tr><td><span class="time-slot">18:00-19:00 PM</span> Mon-Thu</td><td><span class="price-text">R200</span></td></tr>
+        </table>
+        <a href="https://wa.me/27620296345" class="btn-wa">WhatsApp Coach</a>
     </div>
 
     <div class="coach-card">
+        <img src="linda.png" alt="Coach Linda" class="coach-img">
         <div class="coach-title">COACH LINDA</div>
-        <div class="price-row">TICKET: R150 | R200 | R250</div>
-        <div class="location-box">
-            <b>BRANCH: MIDWAY</b><br>
-            Near Midway Crossing Mall
-        </div>
-        <a href="https://wa.me/27679818818" class="btn-wa">Direct WhatsApp</a>
+        <p style="font-size:12px; color:#aaa;">Newlands West (Near Midway Crossing)</p>
+        <table class="schedule-table">
+            <tr><td><span class="time-slot">18:00-19:00 PM</span> Mon-Thu</td><td><span class="price-text">R250</span></td></tr>
+        </table>
+        <a href="https://wa.me/27625600946" class="btn-wa">WhatsApp Coach</a>
     </div>
 </div>
 
-<script>
-    function startTimer() {
-        const eventDate = new Date("July 25, 2026 08:00:00").getTime();
-        setInterval(() => {
-            const now = new Date().getTime();
-            const gap = eventDate - now;
-            const d = Math.floor(gap / (1000 * 60 * 60 * 24));
-            const h = Math.floor((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            document.getElementById("countdown").innerHTML = `<span class="live-dot">● LIVE</span> WORLD CUP STARTS IN: ${d}D : ${h}H`;
-        }, 1000);
-    }
-    startTimer();
-</script>
+<center>
+    <a href="event.html" class="nav-link">GO TO WORLD CUP EVENT PAGE →</a>
+</center>
 
 </body>
 </html>
