@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Total Fitness Academy</title>
+    <title>TOTAL FITNESS ACADEMY (TFA)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background: #050505; color: white; font-family: sans-serif; margin: 0; }
