@@ -3,59 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TFA - World Cup Of Aerobics</title>
+    <title>TFA - World Cup Dashboard</title>
     <style>
-        body { background-color: #1a1a1a; color: white; font-family: sans-serif; text-align: center; margin: 0; padding-bottom: 50px; }
-        .header { background: linear-gradient(135deg, #4b0082, #000); padding: 30px 20px; border-bottom: 4px solid #FFD700; }
-        .logo-dash { width: 90px; height: 90px; background: #FFD700; border-radius: 15px; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center; color: black; font-weight: bold; border: 3px solid white; font-size: 20px; box-shadow: 0 0 15px rgba(255, 215, 0, 0.4); }
-        h1 { color: #FFD700; margin: 0; font-size: 22px; text-transform: uppercase; }
-        .timer-bar { background: #FFD700; color: black; padding: 12px; font-weight: bold; font-size: 18px; margin: 15px 0; }
-        .instructor-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; padding: 20px; }
-        .bio-card { background: #2d2d2d; border-radius: 15px; padding: 20px; border: 1px solid #444; }
-        .profile-img { width: 110px; height: 110px; border-radius: 50%; border: 3px solid #FFD700; margin-bottom: 10px; background: #555; object-fit: cover; }
-        .price-tag { background: #4b0082; color: #FFD700; padding: 5px 12px; border-radius: 20px; font-size: 13px; border: 1px solid #FFD700; margin: 10px 0; display: inline-block; }
-        .btn-wa { display: block; background: #25D366; color: white; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 15px; }
+        body { background-color: #0d0d0d; color: white; font-family: 'Arial', sans-serif; margin: 0; }
+        
+        /* BEIN SPORT STYLE DASHBOARD */
+        .header-dashboard { background: #4b0082; padding: 20px; border-bottom: 5px solid #FFD700; display: flex; align-items: center; justify-content: center; flex-direction: column; }
+        .main-logo { width: 180px; margin-bottom: 10px; filter: drop-shadow(0 0 10px rgba(138, 43, 226, 0.8)); }
+        
+        .timer-banner { background: #FFD700; color: black; padding: 10px; font-weight: 900; font-size: 22px; text-transform: uppercase; letter-spacing: 1px; }
+        .sub-banner { background: #1a1a1a; color: #FFD700; padding: 5px; font-size: 14px; letter-spacing: 3px; border-bottom: 1px solid #333; }
+
+        .instructor-grid { padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+        .coach-card { background: #1a1a1a; border-left: 6px solid #4b0082; border-radius: 4px; padding: 25px; text-align: left; transition: 0.3s; }
+        .coach-card:hover { border-left-color: #FFD700; background: #222; }
+        
+        .coach-title { color: #FFD700; font-size: 26px; font-weight: 800; margin: 0; }
+        .price-info { color: #fff; font-size: 15px; margin: 10px 0; background: rgba(75, 0, 130, 0.3); padding: 5px; display: inline-block; }
+        
+        .location-box { font-size: 14px; color: #bbb; line-height: 1.5; margin: 15px 0; border-top: 1px solid #333; padding-top: 10px; }
+        
+        /* FIXED WHATSAPP BUTTON */
+        .btn-wa { display: block; background: #25D366; color: white; padding: 15px; text-align: center; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 16px; margin-top: 15px; }
     </style>
 </head>
 <body>
 
-<div class="header">
-    <div class="logo-dash">TFA</div>
-    <h1>TOTAL FITNESS ACADEMY</h1>
-    <div style="font-style: italic; color: #ccc;">"Eyomphakathi"</div>
+<div class="header-dashboard">
+    <img src="https://i.ibb.co/S769L6mG/image.png" alt="Total Fitness Academy Logo" class="main-logo">
+    <div style="font-weight: bold; color: #FFD700; font-size: 18px;">EYOMPHAKATHI</div>
 </div>
 
-<div class="timer-bar" id="countdown">🏆 CALCULATING WORLD CUP COUNTDOWN...</div>
+<div class="sub-banner">WORLD CUP OF AEROBICS DASHBOARD</div>
+<div class="timer-banner" id="timer">LIVE COUNTDOWN LOADING...</div>
 
 <div class="instructor-grid">
-    <div class="bio-card">
-        <img src="cbonza.jpg" class="profile-img" alt="Coach Cbonza">
-        <div style="font-weight:bold; font-size:22px; color:#FFD700;">COACH CBONZA</div>
-        <div class="price-tag">TICKET: R150 | R200 | R250</div>
-        <p style="font-size:14px;"><b>K Section Branch:</b> Sandwiched between Midway Crossing and KwaMashu Station</p>
-        <a href="https://wa.me/27679818818" class="btn-wa">Direct WhatsApp</a>
+    <div class="coach-card">
+        <div class="coach-title">COACH CBONZA</div>
+        <div class="price-info">TICKETS: R150 | R200 | R250</div>
+        <div class="location-box">
+            <b>Branch:</b> K Section<br>
+            (Sandwiched between Midway Crossing & KwaMashu Station)
+        </div>
+        <a href="https://wa.me/27679818818" class="btn-wa">WHATSAPP COACH</a>
     </div>
 
-    <div class="bio-card">
-        <img src="lungisa.jpg" class="profile-img" alt="Coach Lungisa">
-        <div style="font-weight:bold; font-size:22px; color:#FFD700;">COACH LUNGISA</div>
-        <div class="price-tag">TICKET: R150 | R200 | R250</div>
-        <p style="font-size:14px;"><b>Branch:</b> Near Bridge City Shopping Centre</p>
-        <a href="https://wa.me/27767981818" class="btn-wa">Direct WhatsApp</a>
+    <div class="coach-card">
+        <div class="coach-title">COACH LUNGISA</div>
+        <div class="price-info">TICKETS: R150 | R200 | R250</div>
+        <div class="location-box">
+            <b>Branch:</b> Near Bridge City Shopping Centre
+        </div>
+        <a href="https://wa.me/27767981818" class="btn-wa">WHATSAPP COACH</a>
+    </div>
+
+    <div class="coach-card">
+        <div class="coach-title">COACH LINDA</div>
+        <div class="price-info">TICKETS: R150 | R200 | R250</div>
+        <div class="location-box">
+            <b>Branch:</b> Near Midway Crossing Mall
+        </div>
+        <a href="https://wa.me/27679818818" class="btn-wa">WHATSAPP COACH</a>
     </div>
 </div>
 
 <script>
-    function updateTimer() {
+    function runTimer() {
         const target = new Date("July 25, 2026 08:00:00").getTime();
-        const now = new Date().getTime();
-        const diff = target - now;
-        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        document.getElementById("countdown").innerHTML = `🏆 WORLD CUP STARTS IN: ${d}d ${h}h`;
+        setInterval(() => {
+            const now = new Date().getTime();
+            const diff = target - now;
+            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            document.getElementById("timer").innerHTML = `LIVE START IN: ${d}D : ${h}H`;
+        }, 1000);
     }
-    setInterval(updateTimer, 1000);
-    updateTimer();
+    runTimer();
 </script>
 
 </body>
