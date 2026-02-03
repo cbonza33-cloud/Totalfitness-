@@ -56,7 +56,8 @@
             100% { transform: rotate(360deg); }
         }
     </style>
-</head>
+</head><link rel="manifest" href="manifest.json">
+
 <body>
 
     <div class="logo-container">
