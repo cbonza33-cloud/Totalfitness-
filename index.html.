@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TFA | Loading...</title>
     <style>
-        body { background: #ffffff; margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; }
-        .bein-box { display: flex; align-items: center; border: 3px solid #4b0082; border-radius: 8px; font-weight: bold; font-size: 38px; font-family: sans-serif; }
+        body { background: #ffffff; margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: sans-serif; }
+        .bein-box { display: flex; align-items: center; border: 3px solid #4b0082; border-radius: 8px; font-weight: bold; font-size: 38px; }
         .bein-left { padding: 10px 20px; color: #4b0082; background: white; }
         .bein-right { padding: 10px 20px; color: white; background: #4b0082; }
-        .loader { border: 4px solid #f3f3f3; border-top: 4px solid #25D366; border-radius: 50%; width: 25px; height: 25px; animation: spin 1s linear infinite; margin: 20px auto 0; }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
     </style>
 </head>
 <body>
@@ -19,11 +17,13 @@
             <div class="bein-left">beIN</div>
             <div class="bein-right">TFA</div>
         </div>
-        <div class="loader"></div>
+        <p style="color: #4b0082; margin-top: 20px;">LOADING...</p>
     </div>
     <script>
-        /* Redirects to home.html after 3 seconds */
-        setTimeout(function() { window.location.href = "home.html"; }, 3000);
+        /* This moves the user to your dashboard automatically */
+        setTimeout(function() { 
+            window.location.href = "home.html"; 
+        }, 3000);
     </script>
 </body>
 </html>
