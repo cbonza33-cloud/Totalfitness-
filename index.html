@@ -5,40 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TFA | Official Dashboard</title>
     <style>
-        body { background: radial-gradient(circle at center, #1a0033 0%, #050505 100%); color: #ffffff; font-family: 'Segoe UI', sans-serif; margin: 0; padding-bottom: 50px; text-align: center; }
+        body { background: #050505; color: #ffffff; font-family: 'Segoe UI', sans-serif; margin: 0; padding-bottom: 100px; text-align: center; }
+        .header-bein { background: linear-gradient(135deg, #4b0082, #1a0033); padding: 25px; border-bottom: 4px solid #25D366; }
+        .dash-banner { background: #f8f8f8; color: #4b0082; padding: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; }
         
-        /* Banner Style */
-        .banner-container { width: 100%; max-width: 600px; margin: 20px auto; padding: 10px; }
-        .banner-img { width: 100%; border-radius: 15px; border: 2px solid #4b0082; cursor: pointer; transition: 0.3s; }
-        .banner-img:hover { transform: scale(1.02); border-color: #25D366; }
+        /* Banner & Countdown */
+        .banner-container { width: 95%; max-width: 600px; margin: 20px auto; }
+        .banner-img { width: 100%; border-radius: 12px; border: 2px solid #25D366; box-shadow: 0 0 20px rgba(37, 211, 102, 0.3); }
 
-        .dash-banner { background: #f8f8f8; color: #4b0082; padding: 10px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; margin-top: 20px; }
-        
-        /* Coach Cards */
+        /* Coach Grid */
         .container { padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .coach-card { background: rgba(20, 20, 20, 0.9); border: 1px solid #333; border-top: 4px solid #4b0082; padding: 20px; border-radius: 4px; position: relative; }
-        .id-photo { width: 105px; height: 140px; border: 2px solid #c0c0c0; margin: 0 auto 15px; object-fit: cover; display: block; }
-        .schedule-box { font-size: 13px; text-align: left; display: inline-block; margin: 10px 0; color: #ddd; width: 100%; }
-        .price-tag { color: #25D366; font-weight: bold; float: right; }
-        .btn-wa { display: block; background: #25D366; color: #fff; text-align: center; padding: 12px; text-decoration: none; font-weight: 700; border-radius: 2px; margin-top: 10px; }
-        
-        /* Ticket Button */
-        .btn-ticket { background:#4b0082; color:white; text-decoration:none; padding:18px 25px; display:inline-block; margin:20px; border-radius:8px; font-weight:bold; border: 2px solid #25D366; transition: 0.3s; }
-        .btn-ticket:hover { background: #25D366; color: #000; }
+        .coach-card { background: #111; border: 1px solid #333; border-top: 4px solid #4b0082; padding: 20px; border-radius: 4px; }
+        .id-photo { width: 110px; height: 140px; border: 2px solid #c0c0c0; margin: 0 auto 15px; object-fit: cover; display: block; }
+        .venue-text { font-size: 11px; color: #25D366; margin-bottom: 10px; text-transform: uppercase; }
+        .btn-wa { display: block; background: #25D366; color: #000; text-align: center; padding: 14px; text-decoration: none; font-weight: bold; border-radius: 2px; }
 
-        /* Instructor Roster Grid */
-        .roster-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; padding: 20px; }
-        .elite-card { background: #111; border: 1px solid #222; border-radius: 5px; overflow: hidden; font-size: 11px; }
-        .elite-photo { width: 100%; height: 120px; object-fit: cover; background: #222; }
+        /* Competition Categories Highlight */
+        .comp-alert { background: #4b0082; color: white; padding: 15px; margin: 20px; border-radius: 8px; border: 1px dashed #25D366; }
+
+        /* Ticker */
+        .ticker-wrap { position: fixed; bottom: 0; width: 100%; background: #4b0082; color: white; padding: 12px 0; border-top: 3px solid #25D366; overflow: hidden; z-index: 1000; }
+        .ticker-move { display: inline-block; white-space: nowrap; animation: ticker 30s linear infinite; }
+        @keyframes ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+        .ticker-item { display: inline-block; padding: 0 40px; font-weight: bold; }
     </style>
 </head>
 <body>
 
+<div class="header-bein">
+    <h1 style="margin:0;">TOTAL FITNESS ACADEMY</h1>
+</div>
+
 <div class="banner-container">
-    <a href="event.html">
-        <img src="https://i.ibb.co/68XwD6qf/image.png" alt="World Cup Countdown" class="banner-img">
-    </a>
-    <p style="font-size: 12px; color: #25D366; margin-top: 10px;">Click banner for Event Details & Venue Map</p>
+    <a href="event.html"><img src="https://i.ibb.co/68XwD6qf/image.png" class="banner-img"></a>
+</div>
+
+<div class="comp-alert">
+    <strong>🏆 COMPETITION MODE:</strong> Select categories will feature judged battles for the Championship Title!
 </div>
 
 <div class="dash-banner">MAIN INSTRUCTORS</div>
@@ -47,147 +50,31 @@
     <div class="coach-card">
         <img src="IMG_1538.png" class="id-photo">
         <h3>COACH CBONZA</h3>
-        <div class="schedule-box">
-            • 05:00-06:00 (Mon-Sat) <span class="price-tag">R250</span><br>
-            • 17:00-19:00 (Mon-Thu) <span class="price-tag">R150</span><br>
-            • 18:00-19:00 (Mon-Thu) <span class="price-tag">R150</span>
-        </div>
-        <a href="https://wa.me/27679818629" class="btn-wa">WHATSAPP COACH</a>
+        <a href="https://wa.me/27679818629" class="btn-wa">WHATSAPP</a>
     </div>
 
     <div class="coach-card">
         <img src="IMG_1539.png" class="id-photo">
         <h3>COACH LUNGISA</h3>
-        <div class="schedule-box">• 18:00-19:00 (Mon-Thu) <span class="price-tag">R200</span></div>
-        <p style="font-size:10px; color:#aaa;">KwaMashu E Section ScoutHall</p>
-        <a href="https://wa.me/27620296345" class="btn-wa">WHATSAPP COACH</a>
+        <p class="venue-text">KWAMASHU E SECTION SCOUTHALL</p>
+        <a href="https://wa.me/27620296345" class="btn-wa">BOOK R300 TICKETS</a>
     </div>
 
     <div class="coach-card">
         <img src="IMG_1540.png" class="id-photo">
         <h3>COACH LINDA</h3>
-        <div class="schedule-box">• 18:00-19:00 (Mon-Thu) <span class="price-tag">R250</span></div>
-        <p style="font-size:10px; color:#aaa;">Newlands West Midways Crossing</p>
-        <a href="https://wa.me/27625600946" class="btn-wa">WHATSAPP COACH</a>
+        <p class="venue-text">NEWLANDS WEST NEAR MIDWAY CROSSING</p>
+        <a href="https://wa.me/27625600946" class="btn-wa">WHATSAPP</a>
     </div>
 </div>
 
-<center>
-    <a href="https://wa.me/27620296345?text=I want to buy a World Cup Ticket (R300)" class="btn-ticket">
-        🎟️ BUY WORLD CUP ENTRY - R300<br>
-        <span style="font-size:10px; font-weight:normal;">Direct WhatsApp to Coach Lungisa</span>
-    </a>
-</center>
-
-<div class="dash-banner" style="background:#222; color:#25D366;">HIRED ELITE SQUAD (30)</div>
-<div class="roster-grid" id="instructorGrid"></div>
-
-<script>
-    // Generate the 30 instructor slots
-    const grid = document.getElementById('instructorGrid');
-    for (let i = 1; i <= 30; i++) {
-        grid.innerHTML += `
-            <div class="elite-card">
-                <img src="coach${i}.jpg" class="elite-photo" alt="Instructor ${i}">
-                <div style="padding:8px; color:#25D366; font-weight:bold;">ELITE COACH ${i}</div>
-            </div>`;
-    }
-</script><script>
-    // 1. ADD YOUR NAMES HERE (Keep the quotes and commas)
-    const instructorNames = [
-        "Thabo M.", "Zandile Z.", "Sipho K.", "Coach 04", "Coach 05",
-        "Coach 06", "Coach 07", "Coach 08", "Coach 09", "Coach 10",
-        "Coach 11", "Coach 12", "Coach 13", "Coach 14", "Coach 15",
-        "Coach 16", "Coach 17", "Coach 18", "Coach 19", "Coach 20",
-        "Coach 21", "Coach 22", "Coach 23", "Coach 24", "Coach 25",
-        "Coach 26", "Coach 27", "Coach 28", "Coach 29", "Coach 30"
-    ];
-
-    // 2. This script builds the 30 cards using your names
-    const grid = document.getElementById('instructorGrid');
-    
-    for (let i = 0; i < 30; i++) {
-        // We use i + 1 for the photo name (coach1.jpg) 
-        // and instructorNames[i] for the real name
-        grid.innerHTML += `
-            <div class="elite-card">
-                <img src="coach${i + 1}.jpg" class="elite-photo" alt="Instructor ${i + 1}">
-                <div style="padding:8px; color:#25D366; font-weight:bold;">
-                    ${instructorNames[i]}
-                </div>
-            </div>`;
-    }
-
-    // 3. Countdown Timer Fix
-    const eventDate = new Date("July 25, 2026 08:00:00").getTime();
-    setInterval(function() {
-        const now = new Date().getTime();
-        const d = eventDate - now;
-        const days = Math.floor(d / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((d % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        document.getElementById("timer").innerHTML = days + " DAYS : " + hours + " HRS UNTIL WORLD CUP";
-    }, 1000);
-</script<script>
-    // 1. DATA: List the Name and Category for all 30 coaches
-    const instructors = [
-        { name: "Thabo M.", bio: "Hi-Lo Specialist" },
-        { name: "Zandile Z.", bio: "Step Queen" },
-        { name: "Sipho K.", bio: "Functional Power" },
-        { name: "Coach 04", bio: "Functional Step" },
-        { name: "Coach 05", bio: "Box & Burn" },
-        { name: "Coach 06", bio: "Box Step Master" },
-        { name: "Coach 07", bio: "Hi-Lo High Energy" },
-        { name: "Coach 08", bio: "Step Specialist" },
-        { name: "Coach 09", bio: "Functional Training" },
-        { name: "Coach 10", bio: "Functional Step" },
-        { name: "Coach 11", bio: "Box Specialist" },
-        { name: "Coach 12", bio: "Box Step" },
-        { name: "Coach 13", bio: "Hi-Lo" },
-        { name: "Coach 14", bio: "Step" },
-        { name: "Coach 15", bio: "Functional" },
-        { name: "Coach 16", bio: "Functional Step" },
-        { name: "Coach 17", bio: "Box" },
-        { name: "Coach 18", bio: "Box Step" },
-        { name: "Coach 19", bio: "Hi-Lo" },
-        { name: "Coach 20", bio: "Step" },
-        { name: "Coach 21", bio: "Functional" },
-        { name: "Coach 22", bio: "Functional Step" },
-        { name: "Coach 23", bio: "Box" },
-        { name: "Coach 24", bio: "Box Step" },
-        { name: "Coach 25", bio: "Hi-Lo" },
-        { name: "Coach 26", bio: "Step" },
-        { name: "Coach 27", bio: "Functional" },
-        { name: "Coach 28", bio: "Functional Step" },
-        { name: "Coach 29", bio: "Box" },
-        { name: "Coach 30", bio: "Box Step" }
-    ];
-
-    // 2. BUILDER: This loop creates all 30 cards automatically
-    const grid = document.getElementById('instructorGrid');
-    
-    instructors.forEach((coach, index) => {
-        grid.innerHTML += `
-            <div class="elite-card">
-                <img src="coach${index + 1}.jpg" class="elite-photo" alt="${coach.name}">
-                <div style="padding:8px;">
-                    <div style="color:#fff; font-weight:bold; font-size:12px;">${coach.name}</div>
-                    <div style="color:#25D366; font-size:10px; margin-top:2px;">${coach.bio}</div>
-                </div>
-            </div>`;
-    });
-
-    // 3. COUNTDOWN TIMER
-    const eventDate = new Date("July 25, 2026 08:00:00").getTime();
-    setInterval(function() {
-        const now = new Date().getTime();
-        const d = eventDate - now;
-        const days = Math.floor(d / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((d % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        document.getElementById("timer").innerHTML = days + " DAYS : " + hours + " HRS UNTIL WORLD CUP";
-    }, 1000);
-</script>
->
-
+<div class="ticker-wrap">
+    <div class="ticker-move">
+        <div class="ticker-item">LIVE: WORLD CUP 2026 REGISTRATION OPEN</div>
+        <div class="ticker-item">NEWS: COMPETITION CATEGORIES ANNOUNCED</div>
+        <div class="ticker-item">TICKETS: R300 VIA COACH LUNGISA</div>
+    </div>
+</div>
 
 </body>
 </html>
