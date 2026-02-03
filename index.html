@@ -5,76 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TFA | Official Dashboard</title>
     <style>
-        body { background: #050505; color: #ffffff; font-family: 'Segoe UI', sans-serif; margin: 0; padding-bottom: 100px; text-align: center; }
-        .header-bein { background: linear-gradient(135deg, #4b0082, #1a0033); padding: 25px; border-bottom: 4px solid #25D366; }
-        .dash-banner { background: #f8f8f8; color: #4b0082; padding: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; }
+        body { background: #050505; color: #ffffff; font-family: 'Segoe UI', sans-serif; margin: 0; padding-bottom: 80px; text-align: center; overflow-x: hidden; }
         
-        /* Banner & Countdown */
+        /* beIN Sport Style Header */
+        .header-bein { background: linear-gradient(135deg, #4b0082, #1a0033); padding: 25px; border-bottom: 4px solid #25D366; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        .dash-banner { background: #f8f8f8; color: #4b0082; padding: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; border-left: 10px solid #25D366; }
+        
+        /* Banner Section */
         .banner-container { width: 95%; max-width: 600px; margin: 20px auto; }
-        .banner-img { width: 100%; border-radius: 12px; border: 2px solid #25D366; box-shadow: 0 0 20px rgba(37, 211, 102, 0.3); }
+        .banner-img { width: 100%; border-radius: 12px; border: 2px solid #25D366; cursor: pointer; }
 
-        /* Coach Grid */
+        /* Competition Alert */
+        .comp-alert { background: #4b0082; color: #25D366; padding: 15px; margin: 20px auto; max-width: 800px; border: 2px solid #25D366; font-weight: 900; border-radius: 5px; }
+
+        /* Coach Cards Layout */
         .container { padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .coach-card { background: #111; border: 1px solid #333; border-top: 4px solid #4b0082; padding: 20px; border-radius: 4px; }
-        .id-photo { width: 110px; height: 140px; border: 2px solid #c0c0c0; margin: 0 auto 15px; object-fit: cover; display: block; }
-        .venue-text { font-size: 11px; color: #25D366; margin-bottom: 10px; text-transform: uppercase; }
-        .btn-wa { display: block; background: #25D366; color: #000; text-align: center; padding: 14px; text-decoration: none; font-weight: bold; border-radius: 2px; }
+        .coach-card { background: #111; border: 1px solid #333; border-top: 5px solid #4b0082; padding: 25px; border-radius: 4px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+        .id-photo { width: 110px; height: 145px; border: 2px solid #c0c0c0; margin: 0 auto 15px; object-fit: cover; display: block; }
+        .venue-label { font-size: 11px; color: #25D366; font-weight: bold; text-transform: uppercase; margin: 10px 0; }
+        .btn-wa { display: block; background: #25D366; color: #000; text-align: center; padding: 15px; text-decoration: none; font-weight: 900; border-radius: 2px; margin-top: 10px; }
+        
+        /* 30-Instructor Grid */
+        .roster-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; padding: 20px; }
+        .elite-card { background: #1a1a1a; border: 1px solid #333; border-radius: 4px; padding: 10px; }
+        .elite-name { font-size: 12px; font-weight: bold; color: #fff; margin-top: 5px; }
+        .elite-cat { font-size: 10px; color: #25D366; }
 
-        /* Competition Categories Highlight */
-        .comp-alert { background: #4b0082; color: white; padding: 15px; margin: 20px; border-radius: 8px; border: 1px dashed #25D366; }
-
-        /* Ticker */
-        .ticker-wrap { position: fixed; bottom: 0; width: 100%; background: #4b0082; color: white; padding: 12px 0; border-top: 3px solid #25D366; overflow: hidden; z-index: 1000; }
-        .ticker-move { display: inline-block; white-space: nowrap; animation: ticker 30s linear infinite; }
+        /* Ticker Animation */
+        .ticker-wrap { position: fixed; bottom: 0; width: 100%; background: #4b0082; color: white; padding: 12px 0; border-top: 3px solid #25D366; z-index: 1000; }
+        .ticker-move { display: inline-block; white-space: nowrap; animation: ticker 40s linear infinite; }
         @keyframes ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
-        .ticker-item { display: inline-block; padding: 0 40px; font-weight: bold; }
+        .ticker-item { display: inline-block; padding: 0 50px; font-weight: bold; font-size: 14px; }
     </style>
 </head>
 <body>
 
 <div class="header-bein">
-    <h1 style="margin:0;">TOTAL FITNESS ACADEMY</h1>
+    <h1 style="margin:0; letter-spacing:2px;">TOTAL FITNESS ACADEMY</h1>
 </div>
 
 <div class="banner-container">
-    <a href="event.html"><img src="https://i.ibb.co/68XwD6qf/image.png" class="banner-img"></a>
+    <a href="event.html"><img src="https://i.ibb.co/68XwD6qf/image.png" class="banner-img" alt="Countdown"></a>
+    <p style="color:#25D366; font-weight:bold; margin-top:10px;">TAP BANNER FOR FULL EVENT DETAILS</p>
 </div>
 
 <div class="comp-alert">
-    <strong>🏆 COMPETITION MODE:</strong> Select categories will feature judged battles for the Championship Title!
+    🚨 LIVE COMPETITION MODE ENABLED: TROPHIES FOR STEP & HI-LO CATEGORIES 🚨
 </div>
 
-<div class="dash-banner">MAIN INSTRUCTORS</div>
+<div class="dash-banner">OFFICIAL INSTRUCTORS</div>
 
 <div class="container">
     <div class="coach-card">
         <img src="IMG_1538.png" class="id-photo">
         <h3>COACH CBONZA</h3>
-        <a href="https://wa.me/27679818629" class="btn-wa">WHATSAPP</a>
+        <div class="venue-label">Main Academy Sessions</div>
+        <a href="https://wa.me/27679818629" class="btn-wa">WHATSAPP COACH</a>
     </div>
 
     <div class="coach-card">
         <img src="IMG_1539.png" class="id-photo">
         <h3>COACH LUNGISA</h3>
-        <p class="venue-text">KWAMASHU E SECTION SCOUTHALL</p>
-        <a href="https://wa.me/27620296345" class="btn-wa">BOOK R300 TICKETS</a>
+        <div class="venue-label">KwaMashu E Section ScoutHall</div>
+        <a href="https://wa.me/27620296345?text=I want to buy a World Cup Ticket (R300)" class="btn-wa" style="background:#4b0082; color:white;">BUY R300 TICKETS</a>
     </div>
 
-    <div class="coach-card">
+    <div class="coach-card" style="border-top-color: #25D366;">
         <img src="IMG_1540.png" class="id-photo">
         <h3>COACH LINDA</h3>
-        <p class="venue-text">NEWLANDS WEST NEAR MIDWAY CROSSING</p>
-        <a href="https://wa.me/27625600946" class="btn-wa">WHATSAPP</a>
+        <div class="venue-label">Newlands West Near Midway Crossing</div>
+        <a href="https://wa.me/27625600946" class="btn-wa">WHATSAPP COACH</a>
     </div>
 </div>
+
+<div class="dash-banner">THE HIRED SQUAD (30 INSTRUCTORS)</div>
+<div class="roster-grid" id="instructorGrid">
+    </div>
 
 <div class="ticker-wrap">
     <div class="ticker-move">
-        <div class="ticker-item">LIVE: WORLD CUP 2026 REGISTRATION OPEN</div>
-        <div class="ticker-item">NEWS: COMPETITION CATEGORIES ANNOUNCED</div>
-        <div class="ticker-item">TICKETS: R300 VIA COACH LUNGISA</div>
+        <div class="ticker-item">LIVE: WORLD CUP 2026 REGISTRATION IS OPEN</div>
+        <div class="ticker-item">VENUE: KWAMASHU L COMMUNITY HALL</div>
+        <div class="ticker-item">TICKETS: R300 PER PARTICIPANT</div>
+        <div class="ticker-item">COMPETITION: JUDGED BATTLES FOR STEP & HI-LO</div>
     </div>
 </div>
+
+<script>
+    const categories = ["Hi-Lo", "Step", "Functional", "Functional Step", "Box", "Box Step"];
+    const grid = document.getElementById('instructorGrid');
+    for (let i = 1; i <= 30; i++) {
+        const cat = categories[(i-1) % categories.length];
+        grid.innerHTML += `
+            <div class="elite-card">
+                <div class="elite-name">COACH ${i}</div>
+                <div class="elite-cat">${cat}</div>
+            </div>`;
+    }
+</script>
 
 </body>
 </html>
