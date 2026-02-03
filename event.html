@@ -5,31 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>World Cup Of Aerobics 2026</title>
     <style>
-        body { background: #050505; color: white; font-family: sans-serif; text-align: center; margin: 0; }
-        .header { background: linear-gradient(to bottom, #4b0082, #000); padding: 50px 20px; border-bottom: 2px solid #25D366; }
-        .info-card { background: #111; padding: 30px; border: 1px solid #4b0082; margin: -30px 20px 20px; border-radius: 8px; }
-        .qr-box { background: white; padding: 15px; width: 220px; margin: 20px auto; border-radius: 10px; }
-        .btn-back { color: #aaa; text-decoration: none; font-size: 14px; display: inline-block; margin-top: 40px; padding: 10px; border: 1px solid #333; border-radius: 5px; }
+        body { background: #050505; color: white; font-family: 'Segoe UI', sans-serif; text-align: center; margin: 0; }
+        .header { background: linear-gradient(to bottom, #4b0082, #000); padding: 40px 20px; border-bottom: 2px solid #25D366; }
+        .price-card { background: #1a1a1a; border: 1px solid #25D366; margin: 20px; padding: 20px; border-radius: 8px; }
+        .price-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #333; }
+        .qr-box { background: white; padding: 15px; width: 200px; margin: 20px auto; border-radius: 10px; }
+        .btn-back { color: #aaa; text-decoration: none; display: inline-block; margin: 30px 0; border: 1px solid #333; padding: 10px 20px; border-radius: 5px; }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1 style="font-size: 28px; margin:0;">WORLD CUP OF AEROBICS</h1>
-        <p style="color:#25D366; font-weight:bold; letter-spacing:2px;">ANNUAL CHAMPIONSHIP 2026</p>
+        <h1>WORLD CUP OF AEROBICS</h1>
+        <p style="color:#25D366; font-weight:bold;">ANNUAL CHAMPIONSHIP 2026</p>
     </div>
 
-    <div class="info-card">
-        <h3 style="color:#aaa; margin:0;">📍 LOCATION</h3>
-        <p style="font-size:20px;">KwaMashu L Community Hall</p>
-        <h3 style="color:#aaa; margin:15px 0 0;">📅 DATE & TIME</h3>
-        <p style="font-size:18px;">25 July 2026 | 08:00 - 20:00</p>
+    <div class="price-card">
+        <h3>🎟️ TICKET PRICES</h3>
+        <div class="price-row"><span>General Admission</span> <strong>R150</strong></div>
+        <div class="price-row"><span>VIP Access</span> <strong>R350</strong></div>
+        <div class="price-row"><span>Group (5 People)</span> <strong>R600</strong></div>
     </div>
 
-    <h3>OFFICIAL REGISTRATION</h3>
+    <div class="info-card" style="padding: 20px;">
+        <p>📍 KwaMashu L Community Hall</p>
+        <p>📅 25 July 2026 | 08:00 - 20:00</p>
+    </div>
+
+    <h3>SCAN TO REGISTER</h3>
     <div class="qr-box">
         <img src="IMG_1543.jpeg" alt="World Cup QR Code" style="width:100%;">
     </div>
     
-    <a href="index.html" class="btn-back">← RETURN TO DASHBOARD</a>
+    <a href="index.html" class="btn-back">← BACK TO DASHBOARD</a>
 </body>
 </html>
