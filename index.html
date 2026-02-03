@@ -15,8 +15,13 @@
         .container { padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
         .coach-card { background: rgba(20, 20, 20, 0.9); border: 1px solid #333; border-top: 4px solid #4b0082; padding: 20px; border-radius: 4px; }
         .id-photo { width: 105px; height: 140px; border: 2px solid #c0c0c0; margin: 0 auto 15px; object-fit: cover; display: block; }
+        .schedule-box { font-size: 13px; text-align: left; display: inline-block; margin: 10px 0; color: #ddd; width: 100%; }
+        .price-tag { color: #25D366; font-weight: bold; float: right; }
         .btn-wa { display: block; background: #25D366; color: #fff; text-align: center; padding: 12px; text-decoration: none; font-weight: 700; border-radius: 2px; margin-top: 10px; }
         
+        /* Ticket Button */
+        .btn-ticket { background:#4b0082; color:white; text-decoration:none; padding:18px 25px; display:inline-block; margin:20px; border-radius:8px; font-weight:bold; border: 2px solid #25D366; }
+
         /* 30-Coach Roster Style */
         .roster-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; padding: 20px; }
         .elite-card { background: #111; border: 1px solid #222; border-radius: 5px; overflow: hidden; font-size: 11px; }
@@ -30,41 +35,62 @@
 </div>
 
 <div class="dash-banner">MAIN INSTRUCTORS</div>
-<div id="timer">LOADING COUNTDOWN...</div>
+<div id="timer">LOADING WORLD CUP COUNTDOWN...</div>
 
 <div class="container">
     <div class="coach-card">
         <img src="IMG_1538.png" class="id-photo">
         <h3>COACH CBONZA</h3>
-        <p>R250 / R150</p>
+        <div class="schedule-box">
+            • 05:00-06:00 (Mon-Sat) <span class="price-tag">R250</span><br>
+            • 17:00-19:00 (Mon-Thu) <span class="price-tag">R150</span><br>
+            • 18:00-19:00 (Mon-Thu) <span class="price-tag">R150</span>
+        </div>
         <a href="https://wa.me/27679818629" class="btn-wa">WHATSAPP</a>
     </div>
+
+    <div class="coach-card">
+        <img src="IMG_1539.png" class="id-photo">
+        <h3>COACH LUNGISA</h3>
+        <div class="schedule-box">• 18:00-19:00 (Mon-Thu) <span class="price-tag">R200</span></div>
+        <p style="font-size:10px; color:#aaa;">KwaMashu E Section ScoutHall</p>
+        <a href="https://wa.me/27620296345" class="btn-wa">WHATSAPP</a>
     </div>
 
-<a href="event.html" style="background:#4b0082; color:white; text-decoration:none; padding:15px; display:inline-block; margin:20px; border-radius:5px; font-weight:bold;">🏆 WORLD CUP TICKETS (R300) →</a>
+    <div class="coach-card">
+        <img src="IMG_1540.png" class="id-photo">
+        <h3>COACH LINDA</h3>
+        <div class="schedule-box">• 18:00-19:00 (Mon-Thu) <span class="price-tag">R250</span></div>
+        <p style="font-size:10px; color:#aaa;">Newlands West Midways Crossing</p>
+        <a href="https://wa.me/27625600946" class="btn-wa">WHATSAPP</a>
+    </div>
+</div>
 
-<div class="dash-banner" style="background:#222; color:#25D366;">HIRED ELITE SQUAD</div>
+<a href="https://wa.me/27620296345?text=Hello Coach Lungisa, I want to buy an entry ticket for the World Cup of Aerobics (R300)" class="btn-ticket">
+    🎟️ BUY WORLD CUP ENTRY - R300<br>
+    <span style="font-size:10px; font-weight:normal;">Direct WhatsApp to Coach Lungisa</span>
+</a>
+
+<div class="dash-banner" style="background:#222; color:#25D366;">HIRED ELITE SQUAD (30)</div>
 <div class="roster-grid" id="instructorGrid"></div>
 
 <script>
-    // This script fills the 30 small slots without breaking the top part
     const grid = document.getElementById('instructorGrid');
     for (let i = 1; i <= 30; i++) {
         grid.innerHTML += `
             <div class="elite-card">
-                <img src="coach${i}.jpg" class="elite-photo">
-                <div style="padding:5px;">COACH ${i}</div>
-            </div>
-        `;
+                <img src="coach${i}.jpg" class="elite-photo" alt="Instructor ${i}">
+                <div style="padding:8px; color:#25D366; font-weight:bold;">ELITE COACH ${i}</div>
+            </div>`;
     }
 
-    // Timer Script
     const eventDate = new Date("July 25, 2026 08:00:00").getTime();
     setInterval(function() {
         const now = new Date().getTime();
         const d = eventDate - now;
         const days = Math.floor(d / (1000 * 60 * 60 * 24));
-        document.getElementById("timer").innerHTML = days + " DAYS UNTIL WORLD CUP";
+        const hours = Math.floor((d % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        document.getElementById("timer").innerHTML = days + " DAYS : " + hours + " HRS UNTIL WORLD CUP";
     }, 1000);
 </script>
 
