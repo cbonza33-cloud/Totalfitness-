@@ -1,43 +1,72 @@
-<style>
-    /* Styling for the large roster */
-    .roster-grid { 
-        display: grid; 
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); 
-        gap: 15px; 
-        padding: 20px; 
-    }
-    .elite-card { 
-        background: #111; 
-        border: 1px solid #222; 
-        padding: 10px; 
-        border-radius: 5px; 
-        text-align: center;
-    }
-    .elite-photo { 
-        width: 100%; 
-        height: 150px; 
-        object-fit: cover; 
-        background: #222; 
-        border-bottom: 2px solid #4b0082;
-    }
-    .elite-name { font-size: 14px; font-weight: bold; margin-top: 8px; color: #fff; text-transform: uppercase; }
-    .elite-bio { font-size: 11px; color: #888; margin-top: 4px; line-height: 1.2; }
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TFA | Official Dashboard</title>
+    <style>
+        body { background: radial-gradient(circle at center, #1a0033 0%, #050505 100%); color: #ffffff; font-family: 'Segoe UI', sans-serif; margin: 0; padding-bottom: 50px; text-align: center; }
+        .header-bein { background: linear-gradient(135deg, #4b0082, #2e004f); padding: 20px; border-bottom: 3px solid #c0c0c0; }
+        .logo-main { width: 180px; }
+        .dash-banner { background: #f8f8f8; color: #4b0082; padding: 10px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; }
+        #timer { font-size: 18px; font-weight: bold; color: #25D366; margin: 15px 0; }
+        
+        /* Main Coaches Style */
+        .container { padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .coach-card { background: rgba(20, 20, 20, 0.9); border: 1px solid #333; border-top: 4px solid #4b0082; padding: 20px; border-radius: 4px; }
+        .id-photo { width: 105px; height: 140px; border: 2px solid #c0c0c0; margin: 0 auto 15px; object-fit: cover; display: block; }
+        .btn-wa { display: block; background: #25D366; color: #fff; text-align: center; padding: 12px; text-decoration: none; font-weight: 700; border-radius: 2px; margin-top: 10px; }
+        
+        /* 30-Coach Roster Style */
+        .roster-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; padding: 20px; }
+        .elite-card { background: #111; border: 1px solid #222; border-radius: 5px; overflow: hidden; font-size: 11px; }
+        .elite-photo { width: 100%; height: 120px; object-fit: cover; background: #222; }
+    </style>
+</head>
+<body>
 
-<div class="dash-banner" style="margin-top:50px;">ELITE INSTRUCTOR SQUAD</div>
-<p style="color:#25D366; font-size:12px; margin-top:10px;">Officially hired and vetted by TFA Administration</p>
+<div class="header-bein">
+    <img src="https://i.ibb.co/S769L6mG/image.png" alt="TFA Logo" class="logo-main">
+</div>
 
-<div class="roster-grid">
-    <div class="elite-card">
-        <img src="placeholder.png" class="elite-photo">
-        <div class="elite-name">Instructor 01</div>
-        <div class="elite-bio">Specialist in High-Intensity Step.</div>
+<div class="dash-banner">MAIN INSTRUCTORS</div>
+<div id="timer">LOADING COUNTDOWN...</div>
+
+<div class="container">
+    <div class="coach-card">
+        <img src="IMG_1538.png" class="id-photo">
+        <h3>COACH CBONZA</h3>
+        <p>R250 / R150</p>
+        <a href="https://wa.me/27679818629" class="btn-wa">WHATSAPP</a>
+    </div>
     </div>
 
-    <div class="elite-card">
-        <img src="placeholder.png" class="elite-photo">
-        <div class="elite-name">Instructor 02</div>
-        <div class="elite-bio">Master of Core and Stability.</div>
-    </div>
+<a href="event.html" style="background:#4b0082; color:white; text-decoration:none; padding:15px; display:inline-block; margin:20px; border-radius:5px; font-weight:bold;">🏆 WORLD CUP TICKETS (R300) →</a>
 
-    </div>
+<div class="dash-banner" style="background:#222; color:#25D366;">HIRED ELITE SQUAD</div>
+<div class="roster-grid" id="instructorGrid"></div>
+
+<script>
+    // This script fills the 30 small slots without breaking the top part
+    const grid = document.getElementById('instructorGrid');
+    for (let i = 1; i <= 30; i++) {
+        grid.innerHTML += `
+            <div class="elite-card">
+                <img src="coach${i}.jpg" class="elite-photo">
+                <div style="padding:5px;">COACH ${i}</div>
+            </div>
+        `;
+    }
+
+    // Timer Script
+    const eventDate = new Date("July 25, 2026 08:00:00").getTime();
+    setInterval(function() {
+        const now = new Date().getTime();
+        const d = eventDate - now;
+        const days = Math.floor(d / (1000 * 60 * 60 * 24));
+        document.getElementById("timer").innerHTML = days + " DAYS UNTIL WORLD CUP";
+    }, 1000);
+</script>
+
+</body>
+</html>
