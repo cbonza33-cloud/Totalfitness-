@@ -92,7 +92,43 @@
                 <div style="padding:8px; color:#25D366; font-weight:bold;">ELITE COACH ${i}</div>
             </div>`;
     }
+</script><script>
+    // 1. ADD YOUR NAMES HERE (Keep the quotes and commas)
+    const instructorNames = [
+        "Thabo M.", "Zandile Z.", "Sipho K.", "Coach 04", "Coach 05",
+        "Coach 06", "Coach 07", "Coach 08", "Coach 09", "Coach 10",
+        "Coach 11", "Coach 12", "Coach 13", "Coach 14", "Coach 15",
+        "Coach 16", "Coach 17", "Coach 18", "Coach 19", "Coach 20",
+        "Coach 21", "Coach 22", "Coach 23", "Coach 24", "Coach 25",
+        "Coach 26", "Coach 27", "Coach 28", "Coach 29", "Coach 30"
+    ];
+
+    // 2. This script builds the 30 cards using your names
+    const grid = document.getElementById('instructorGrid');
+    
+    for (let i = 0; i < 30; i++) {
+        // We use i + 1 for the photo name (coach1.jpg) 
+        // and instructorNames[i] for the real name
+        grid.innerHTML += `
+            <div class="elite-card">
+                <img src="coach${i + 1}.jpg" class="elite-photo" alt="Instructor ${i + 1}">
+                <div style="padding:8px; color:#25D366; font-weight:bold;">
+                    ${instructorNames[i]}
+                </div>
+            </div>`;
+    }
+
+    // 3. Countdown Timer Fix
+    const eventDate = new Date("July 25, 2026 08:00:00").getTime();
+    setInterval(function() {
+        const now = new Date().getTime();
+        const d = eventDate - now;
+        const days = Math.floor(d / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((d % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        document.getElementById("timer").innerHTML = days + " DAYS : " + hours + " HRS UNTIL WORLD CUP";
+    }, 1000);
 </script>
+
 
 </body>
 </html>
