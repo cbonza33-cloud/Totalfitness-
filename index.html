@@ -1,14 +1,43 @@
-<div class="dash-banner" style="margin-top:40px; background:#4b0082; color:white;">GUEST INSTRUCTOR PORTAL</div>
+<style>
+    /* Styling for the large roster */
+    .roster-grid { 
+        display: grid; 
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); 
+        gap: 15px; 
+        padding: 20px; 
+    }
+    .elite-card { 
+        background: #111; 
+        border: 1px solid #222; 
+        padding: 10px; 
+        border-radius: 5px; 
+        text-align: center;
+    }
+    .elite-photo { 
+        width: 100%; 
+        height: 150px; 
+        object-fit: cover; 
+        background: #222; 
+        border-bottom: 2px solid #4b0082;
+    }
+    .elite-name { font-size: 14px; font-weight: bold; margin-top: 8px; color: #fff; text-transform: uppercase; }
+    .elite-bio { font-size: 11px; color: #888; margin-top: 4px; line-height: 1.2; }
+</style>
 
-<div class="container" style="grid-template-columns: 1fr;">
-    <div class="coach-card" style="border-top: 4px solid #25D366;">
-        <h3>WANT TO LEAD A SESSION?</h3>
-        <p style="color:#ddd; font-size:14px;">We are looking for guest instructors for the World Cup season!</p>
-        <ul style="text-align:left; display:inline-block; font-size:13px; color:#aaa;">
-            <li>✅ High-Energy Aerobics</li>
-            <li>✅ Step & HIIT Specialists</li>
-            <li>✅ Professional Exposure</li>
-        </ul>
-        <a href="https://wa.me/27679818629?text=I am interested in being a Guest Instructor" class="btn-wa" style="background:#4b0082;">APPLY AS GUEST COACH</a>
+<div class="dash-banner" style="margin-top:50px;">ELITE INSTRUCTOR SQUAD</div>
+<p style="color:#25D366; font-size:12px; margin-top:10px;">Officially hired and vetted by TFA Administration</p>
+
+<div class="roster-grid">
+    <div class="elite-card">
+        <img src="placeholder.png" class="elite-photo">
+        <div class="elite-name">Instructor 01</div>
+        <div class="elite-bio">Specialist in High-Intensity Step.</div>
     </div>
-</div>
+
+    <div class="elite-card">
+        <img src="placeholder.png" class="elite-photo">
+        <div class="elite-name">Instructor 02</div>
+        <div class="elite-bio">Master of Core and Stability.</div>
+    </div>
+
+    </div>
