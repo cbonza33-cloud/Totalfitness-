@@ -20,7 +20,6 @@
 
         .dash-banner { background: #f8f8f8; color: #4b0082; padding: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; margin-top: 10px; }
         
-        /* Main Navigation Button */
         .btn-world-cup { 
             display: block; background: #4b0082; color: white; padding: 20px; 
             margin: 20px auto; width: 90%; max-width: 500px; text-decoration: none; 
@@ -33,16 +32,14 @@
         .coach-card { background: #111; border: 1px solid #333; border-top: 5px solid #4b0082; padding: 25px; border-radius: 4px; text-align: left; }
         .id-photo { width: 110px; height: 145px; border: 2px solid #c0c0c0; margin: 0 auto 15px; object-fit: cover; display: block; }
         .price-row { color: #25D366; font-weight: bold; float: right; }
-        .venue-label { font-size: 11px; color: #aaa; text-transform: uppercase; margin-top: 10px; display: block; }
+        .venue-label { font-size: 11px; color: #aaa; text-transform: uppercase; margin-top: 10px; display: block; font-weight: bold; }
         .btn-wa { display: block; background: #25D366; color: #000; text-align: center; padding: 14px; text-decoration: none; font-weight: 900; border-radius: 2px; margin-top: 15px; }
 
-        /* 30 Instructor Grid */
+        /* Instructor Grid */
         .instructor-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; padding: 20px; }
         .mini-card { background: #1a1a1a; border: 1px solid #333; padding: 10px; border-radius: 4px; }
-        .mini-name { font-size: 12px; font-weight: bold; color: #25D366; margin-bottom: 3px; }
-        .mini-cat { font-size: 10px; color: #fff; }
+        .mini-name { font-size: 12px; font-weight: bold; color: #25D366; }
 
-        /* News Ticker */
         .ticker-wrap { position: fixed; bottom: 0; width: 100%; background: #4b0082; color: white; padding: 12px 0; border-top: 3px solid #25D366; overflow: hidden; z-index: 1000; }
         .ticker-move { display: inline-block; white-space: nowrap; animation: ticker 40s linear infinite; }
         @keyframes ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
@@ -58,8 +55,8 @@
 <div class="countdown-strip" id="timer">LOADING COUNTDOWN...</div>
 
 <a href="worldcup.html" class="btn-world-cup">
-    🏆 WORLD CUP OF AEROBICS PAGE<br>
-    <span style="font-size:12px; font-weight:normal; color:#25D366;">R300 ENTRY • FULL COMPETITION DETAILS</span>
+    🏆 OPEN WORLD CUP PAGE<br>
+    <span style="font-size:12px; font-weight:normal; color:#25D366;">Competition Details & R300 Tickets</span>
 </a>
 
 <div class="dash-banner">OFFICIAL MAIN INSTRUCTORS</div>
@@ -67,32 +64,32 @@
     <div class="coach-card">
         <img src="IMG_1538.png" class="id-photo">
         <h3 style="margin:0;">COACH CBONZA</h3>
-        <span class="venue-label">Main Academy Sessions</span>
+        <span class="venue-label">📍 KwaMashu K Section</span>
         <div style="font-size:13px; margin-top:10px;">
-            • 05:00 - 06:00 <span class="price-row">R250</span><br>
-            • 17:00 - 19:00 <span class="price-row">R150</span>
+            • 05:00 - 06:00 (Mon-Sat) <span class="price-row">R250</span><br>
+            • 17:00 - 19:00 (Mon-Thu) <span class="price-row">R150</span>
         </div>
-        <a href="https://wa.me/27679818629" class="btn-wa">WHATSAPP COACH</a>
+        <a href="https://wa.me/27679818629?text=Hello%20Coach%20Cbonza,%20I%20am%20interested%20in%20joining%20your%20classes%20at%20K%20Section.%20Please%20send%20me%20more%20details." class="btn-wa">WHATSAPP COACH</a>
     </div>
 
     <div class="coach-card">
         <img src="IMG_1539.png" class="id-photo">
         <h3 style="margin:0;">COACH LUNGISA</h3>
-        <span class="venue-label">KwaMashu E Section ScoutHall</span>
+        <span class="venue-label">📍 KwaMashu E Section (ScoutHall)</span>
         <div style="font-size:13px; margin-top:10px;">
-            • 18:00 - 19:00 <span class="price-row">R200</span>
+            • 18:00 - 19:00 (Mon-Thu) <span class="price-row">R200</span>
         </div>
-        <a href="https://wa.me/27620296345" class="btn-wa">WHATSAPP COACH</a>
+        <a href="https://wa.me/27620296345?text=Hello%20Coach%20Lungisa,%20I%20would%20like%20to%20know%20more%20about%20your%20training%20sessions%20at%20E%20Section." class="btn-wa">WHATSAPP COACH</a>
     </div>
 
     <div class="coach-card">
         <img src="IMG_1540.png" class="id-photo">
         <h3 style="margin:0;">COACH LINDA</h3>
-        <span class="venue-label">Newlands West Midway Crossing</span>
+        <span class="venue-label">📍 Newlands West (Midway Crossing)</span>
         <div style="font-size:13px; margin-top:10px;">
-            • 18:00 - 19:00 <span class="price-row">R250</span>
+            • 18:00 - 19:00 (Mon-Thu) <span class="price-row">R250</span>
         </div>
-        <a href="https://wa.me/27625600946" class="btn-wa">WHATSAPP COACH</a>
+        <a href="https://wa.me/27625600946?text=Hello%20Coach%20Linda,%20I%20am%20interested%20in%20your%20fitness%20classes%20near%20Midway%20Crossing." class="btn-wa">WHATSAPP COACH</a>
     </div>
 </div>
 
@@ -120,15 +117,15 @@
         document.getElementById("timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s UNTIL WORLD CUP";
     }, 1000);
 
-    // 30 INSTRUCTOR GRID SCRIPT
-    const categories = ["HiLo", "Step", "Functional", "Functional Step", "Box", "Box Step"];
+    // 30 INSTRUCTOR GRID
     const grid = document.getElementById('instructorGrid');
+    const categories = ["HiLo", "Step", "Functional", "Functional Step", "Box", "Box Step"];
     for (let i = 1; i <= 30; i++) {
         const cat = categories[(i-1) % categories.length];
         grid.innerHTML += `
             <div class="mini-card">
                 <div class="mini-name">COACH ${i}</div>
-                <div class="mini-cat">${cat}</div>
+                <div style="font-size:10px; color:#fff;">${cat}</div>
             </div>`;
     }
 </script>
