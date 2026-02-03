@@ -3,38 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>World Cup Of Aerobics 2026</title>
+    <title>TFA | World Cup 2026</title>
     <style>
-        body { background: #050505; color: white; font-family: 'Segoe UI', sans-serif; text-align: center; margin: 0; }
-        .header { background: linear-gradient(to bottom, #4b0082, #000); padding: 40px 20px; border-bottom: 2px solid #25D366; }
-        .ticket-card { background: #1a1a1a; border: 2px solid #25D366; margin: 20px; padding: 30px; border-radius: 12px; }
-        .price { font-size: 48px; font-weight: 900; color: #25D366; display: block; margin: 10px 0; }
-        .qr-box { background: white; padding: 15px; width: 200px; margin: 20px auto; border-radius: 10px; }
-        .btn-back { color: #aaa; text-decoration: none; display: inline-block; margin: 30px 0; border: 1px solid #333; padding: 10px 20px; border-radius: 5px; }
+        body { 
+            background: radial-gradient(circle at center, #1a0033 0%, #050505 100%); 
+            color: white; 
+            font-family: 'Segoe UI', sans-serif; 
+            text-align: center; 
+            margin: 0; 
+            padding-bottom: 50px; 
+        }
+        .header-bein { 
+            background: linear-gradient(135deg, #4b0082, #2e004f); 
+            padding: 30px; 
+            border-bottom: 4px solid #25D366; 
+        }
+        .dash-banner { 
+            background: #f8f8f8; 
+            color: #4b0082; 
+            padding: 10px; 
+            font-weight: 900; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+        }
+        .ticket-box { 
+            background: rgba(20, 20, 20, 0.9); 
+            border: 1px solid #333; 
+            border-top: 4px solid #25D366; 
+            margin: 20px auto; 
+            padding: 30px; 
+            max-width: 400px; 
+            border-radius: 4px; 
+        }
+        .price { font-size: 50px; font-weight: 900; color: #25D366; display: block; }
+        .details { color: #aaa; margin: 20px 0; font-size: 14px; line-height: 1.6; }
+        .qr-container { background: white; padding: 15px; width: 220px; margin: 20px auto; border-radius: 10px; }
+        .btn-back { 
+            display: inline-block; 
+            color: #fff; 
+            text-decoration: none; 
+            padding: 15px 30px; 
+            border: 2px solid #4b0082; 
+            border-radius: 5px; 
+            margin-top: 20px; 
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn-back:hover { background: #4b0082; }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>WORLD CUP OF AEROBICS</h1>
-        <p style="letter-spacing:2px;">ANNUAL CHAMPIONSHIP 2026</p>
+
+    <div class="header-bein">
+        <h1 style="margin:0; font-size: 28px;">WORLD CUP OF AEROBICS</h1>
+        <p style="color: #25D366; margin: 5px 0 0 0; font-weight: bold; letter-spacing: 3px;">ANNUAL CHAMPIONSHIP 2026</p>
     </div>
 
-    <div class="ticket-card">
-        <h3>PARTICIPANT ENTRY</h3>
+    <div class="dash-banner">PARTICIPANT REGISTRATION</div>
+
+    <div class="ticket-box">
+        <span style="font-size: 12px; color: #888;">ENTRY PASS</span>
         <span class="price">R300</span>
-        <p style="color:#aaa;">Join the ultimate fitness battle. Limited spots available.</p>
+        <div class="details">
+            📍 KwaMashu L Community Hall<br>
+            📅 25 July 2026 | 08:00 AM<br>
+            🔥 Hi-Lo | Step | Functional | Box
+        </div>
+        <a href="https://wa.me/27620296345?text=I want to buy a World Cup Ticket (R300)" 
+           style="background:#25D366; color:black; padding:12px; display:block; text-decoration:none; font-weight:bold; border-radius:3px;">
+           CONTACT LUNGISA FOR TICKETS
+        </a>
     </div>
 
-    <div class="info-box">
-        <p>📍 KwaMashu L Community Hall</p>
-        <p>📅 25 July 2026</p>
+    <h3>SCAN TO REGISTER</h3>
+    <div class="qr-container">
+        <img src="IMG_1543.jpeg" alt="QR Code" style="width: 100%;">
     </div>
 
-    <h3>SCAN TO APPLY AS PARTICIPANT</h3>
-    <div class="qr-box">
-        <img src="IMG_1543.jpeg" alt="World Cup QR Code" style="width:100%;">
-    </div>
-    
     <a href="index.html" class="btn-back">← BACK TO DASHBOARD</a>
+
 </body>
 </html>
