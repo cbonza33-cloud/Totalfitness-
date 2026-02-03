@@ -3,73 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TFA | Dashboard</title>
+    <title>TFA | Loading...</title>
     <style>
-        body { background: #050505; color: #ffffff; font-family: 'Segoe UI', sans-serif; margin: 0; padding-bottom: 120px; text-align: center; }
-        .header-bein { background: linear-gradient(135deg, #4b0082, #1a0033); padding: 25px; border-bottom: 4px solid #25D366; position: relative; }
-        .live-indicator { position: absolute; top: 15px; left: 15px; background: rgba(0,0,0,0.7); padding: 5px 12px; border-radius: 20px; font-size: 11px; font-weight: bold; border: 1px solid #25D366; }
-        .red-dot { height: 8px; width: 8px; background-color: #ff0000; border-radius: 50%; display: inline-block; margin-right: 5px; animation: blink 1s infinite; }
-        @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }
-        .countdown-strip { background: #25D366; color: #000; padding: 10px; font-weight: 900; font-size: 18px; text-transform: uppercase; }
-        .btn-world-cup { display: block; background: #4b0082; color: white; padding: 20px; margin: 20px auto; width: 90%; max-width: 500px; text-decoration: none; font-weight: 900; border: 3px solid #25D366; border-radius: 10px; box-shadow: 0 0 15px rgba(37, 211, 102, 0.4); }
-        .container { padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
-        .coach-card { background: #111; border: 1px solid #333; border-top: 5px solid #4b0082; padding: 25px; border-radius: 4px; text-align: left; }
-        .id-photo { width: 110px; height: 145px; border: 2px solid #c0c0c0; margin: 0 auto 15px; display: block; object-fit: cover; }
-        .venue-label { font-size: 11px; color: #25D366; text-transform: uppercase; font-weight: bold; display: block; margin-top: 10px; }
-        .btn-wa { display: block; background: #25D366; color: #000; text-align: center; padding: 14px; text-decoration: none; font-weight: 900; margin-top: 15px; }
-        .ticker-wrap { position: fixed; bottom: 0; width: 100%; background: #4b0082; color: white; padding: 12px 0; border-top: 3px solid #25D366; overflow: hidden; z-index: 1000; }
-        .ticker-move { display: inline-block; white-space: nowrap; animation: ticker 40s linear infinite; }
-        @keyframes ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+        body { background: #ffffff; margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; }
+        .bein-logo { width: 280px; height: auto; animation: fadePulse 2s ease-in-out infinite; }
+        @keyframes fadePulse { 0% { opacity: 0.7; transform: scale(0.98); } 50% { opacity: 1; transform: scale(1); } 100% { opacity: 0.7; transform: scale(0.98); } }
     </style>
 </head>
 <body>
-
-<div class="header-bein">
-    <div class="live-indicator"><span class="red-dot"></span> LIVE DASHBOARD</div>
-    <h1 style="margin:0; letter-spacing:2px;">TOTAL FITNESS ACADEMY</h1>
-</div>
-
-<div class="countdown-strip" id="timer">LOADING...</div>
-
-<a href="worldcup.html" class="btn-world-cup">🏆 OPEN WORLD CUP PAGE</a>
-
-<div class="container">
-    <div class="coach-card">
-        <img src="IMG_1538.png" class="id-photo">
-        <h3 style="margin:0;">COACH CBONZA</h3>
-        <span class="venue-label">📍 KwaMashu K Section</span>
-        <a href="https://wa.me/27679818629?text=Hi%20Coach%20Cbonza!%20I%20want%20to%20join%20your%20K%20Section%20classes." class="btn-wa">WHATSAPP COACH</a>
+    <div style="text-align: center;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/BeIN_Sports_logo.svg/2560px-BeIN_Sports_logo.svg.png" class="bein-logo">
+        <p style="font-family: sans-serif; font-weight: bold; color: #4b0082; margin-top: 20px; letter-spacing: 2px;">BROADCASTING LIVE...</p>
     </div>
-
-    <div class="coach-card">
-        <img src="IMG_1539.png" class="id-photo">
-        <h3 style="margin:0;">COACH LUNGISA</h3>
-        <span class="venue-label">📍 KwaMashu E Section (ScoutHall)</span>
-        <a href="https://wa.me/27620296345?text=Hi%20Coach%20Lungisa!%20I%20want%20to%20join%20your%20E%20Section%20classes." class="btn-wa">WHATSAPP COACH</a>
-    </div>
-
-    <div class="coach-card">
-        <img src="IMG_1540.png" class="id-photo">
-        <h3 style="margin:0;">COACH LINDA</h3>
-        <span class="venue-label">📍 Newlands West (Near Midway Crossing)</span>
-        <a href="https://wa.me/27625600946?text=Hi%20Coach%20Linda!%20I%20want%20to%20join%20your%20Newlands%20classes." class="btn-wa">WHATSAPP COACH</a>
-    </div>
-</div>
-
-<div class="ticker-wrap"><div class="ticker-move"><span style="padding:0 50px;">LIVE: WORLD CUP 2026 - JULY 25TH</span><span style="padding:0 50px;">TICKETS: R300 VIA COACH LUNGISA</span></div></div>
-
-<script>
-    const eventDate = new Date("July 25, 2026 08:00:00").getTime();
-    setInterval(function() {
-        const now = new Date().getTime();
-        const d = eventDate - now;
-        const days = Math.floor(d / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((d % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((d % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((d % (1000 * 60)) / 1000);
-        document.getElementById("timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s UNTIL WORLD CUP";
-    }, 1000);
-</script>
-
+    <script>
+        setTimeout(function() { window.location.href = "home.html"; }, 3000);
+    </script>
 </body>
 </html>
