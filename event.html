@@ -11,12 +11,14 @@
             font-family: 'Segoe UI', sans-serif; 
             text-align: center; 
             margin: 0; 
-            padding-bottom: 50px; 
+            overflow-x: hidden;
         }
+        /* beIN Sport Style Header */
         .header-bein { 
             background: linear-gradient(135deg, #4b0082, #2e004f); 
             padding: 30px; 
             border-bottom: 4px solid #25D366; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
         }
         .dash-banner { 
             background: #f8f8f8; 
@@ -30,57 +32,94 @@
             background: rgba(20, 20, 20, 0.9); 
             border: 1px solid #333; 
             border-top: 4px solid #25D366; 
-            margin: 20px auto; 
+            margin: 40px auto; 
             padding: 30px; 
-            max-width: 400px; 
+            max-width: 350px; 
             border-radius: 4px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
         }
-        .price { font-size: 50px; font-weight: 900; color: #25D366; display: block; }
-        .details { color: #aaa; margin: 20px 0; font-size: 14px; line-height: 1.6; }
-        .qr-container { background: white; padding: 15px; width: 220px; margin: 20px auto; border-radius: 10px; }
+        .price { font-size: 50px; font-weight: 900; color: #25D366; display: block; margin-bottom: 10px; }
+        .details { color: #ddd; margin: 20px 0; font-size: 15px; line-height: 1.8; text-transform: uppercase; }
+        .qr-container { background: white; padding: 15px; width: 200px; margin: 20px auto; border-radius: 8px; }
+        
+        /* Navigation Button */
         .btn-back { 
             display: inline-block; 
             color: #fff; 
             text-decoration: none; 
-            padding: 15px 30px; 
+            padding: 15px 40px; 
             border: 2px solid #4b0082; 
+            background: rgba(75, 0, 130, 0.2);
             border-radius: 5px; 
-            margin-top: 20px; 
+            margin-top: 30px; 
             font-weight: bold;
-            transition: 0.3s;
+            text-transform: uppercase;
         }
-        .btn-back:hover { background: #4b0082; }
+
+        /* The Sport Ticker */
+        .ticker-wrap {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: #4b0082;
+            color: white;
+            padding: 10px 0;
+            border-top: 2px solid #25D366;
+            font-weight: bold;
+            overflow: hidden;
+        }
+        .ticker-move {
+            display: inline-block;
+            white-space: nowrap;
+            animation: ticker 25s linear infinite;
+        }
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .ticker-item { display: inline-block; padding: 0 30px; color: #fff; }
+        .ticker-item span { color: #25D366; }
     </style>
 </head>
 <body>
 
     <div class="header-bein">
-        <h1 style="margin:0; font-size: 28px;">WORLD CUP OF AEROBICS</h1>
-        <p style="color: #25D366; margin: 5px 0 0 0; font-weight: bold; letter-spacing: 3px;">ANNUAL CHAMPIONSHIP 2026</p>
+        <h1 style="margin:0; font-size: 24px; letter-spacing: 1px;">TOTAL FITNESS ACADEMY</h1>
+        <p style="color: #25D366; margin: 5px 0 0 0; font-weight: bold; letter-spacing: 4px;">WORLD CUP 2026</p>
     </div>
 
-    <div class="dash-banner">PARTICIPANT REGISTRATION</div>
+    <div class="dash-banner">OFFICIAL PARTICIPANT PORTAL</div>
 
     <div class="ticket-box">
-        <span style="font-size: 12px; color: #888;">ENTRY PASS</span>
+        <span style="font-size: 11px; color: #888; letter-spacing: 2px;">REGISTRATION FEE</span>
         <span class="price">R300</span>
         <div class="details">
-            📍 KwaMashu L Community Hall<br>
-            📅 25 July 2026 | 08:00 AM<br>
-            🔥 Hi-Lo | Step | Functional | Box
+            📍 KwaMashu L Hall<br>
+            📅 25 JULY 2026<br>
+            ⏰ 08:00 - LATE
         </div>
-        <a href="https://wa.me/27620296345?text=I want to buy a World Cup Ticket (R300)" 
-           style="background:#25D366; color:black; padding:12px; display:block; text-decoration:none; font-weight:bold; border-radius:3px;">
-           CONTACT LUNGISA FOR TICKETS
+        <a href="https://wa.me/27620296345?text=Hello Coach Lungisa, I want to book my R300 World Cup entry" 
+           style="background:#25D366; color:black; padding:15px; display:block; text-decoration:none; font-weight:bold; border-radius:3px; text-transform:uppercase;">
+           SECURE YOUR SPOT
         </a>
     </div>
 
-    <h3>SCAN TO REGISTER</h3>
+    <h4 style="margin-top: 40px; color: #25D366;">SCAN FOR PHYSICAL REGISTRATION</h4>
     <div class="qr-container">
-        <img src="IMG_1543.jpeg" alt="QR Code" style="width: 100%;">
+        <img src="IMG_1543.jpeg" alt="TFA QR" style="width: 100%;">
     </div>
 
-    <a href="index.html" class="btn-back">← BACK TO DASHBOARD</a>
+    <a href="index.html" class="btn-back">← RETURN TO DASHBOARD</a>
+
+    <div class="ticker-wrap">
+        <div class="ticker-move">
+            <div class="ticker-item"><span>LIVE:</span> WORLD CUP COUNTDOWN ACTIVE</div>
+            <div class="ticker-item"><span>VENUE:</span> KWAMASHU L COMMUNITY HALL</div>
+            <div class="ticker-item"><span>TICKETS:</span> R300 PARTICIPANT ENTRY</div>
+            <div class="ticker-item"><span>ROSTER:</span> 30 ELITE INSTRUCTORS HIRED</div>
+            <div class="ticker-item"><span>TFA:</span> THE FUTURE OF FITNESS IS HERE</div>
+        </div>
+    </div>
 
 </body>
 </html>
