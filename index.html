@@ -16,8 +16,10 @@
         .container { padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
         .coach-card { background: rgba(20, 20, 20, 0.9); border: 1px solid #333; border-top: 4px solid #4b0082; padding: 20px; border-radius: 4px; }
         .id-photo { width: 105px; height: 140px; border: 2px solid #c0c0c0; margin: 0 auto 15px; object-fit: cover; background: #2a2a2a; display: block; }
-        .schedule-box { font-size: 13px; text-align: left; display: inline-block; margin: 10px 0; color: #ddd; }
+        .schedule-box { font-size: 13px; text-align: left; display: inline-block; margin: 10px 0; color: #ddd; width: 100%; }
+        .price-tag { color: #25D366; font-weight: bold; float: right; }
         .btn-wa { display: block; background: #25D366; color: #fff; text-align: center; padding: 12px; text-decoration: none; font-weight: 700; border-radius: 2px; margin-top: 10px; }
+        .btn-secure { display: inline-block; margin-top: 20px; color: #666; font-size: 11px; text-decoration: none; border: 1px solid #333; padding: 5px 10px; border-radius: 20px; }
     </style>
 </head>
 <body>
@@ -33,9 +35,9 @@
         <img src="IMG_1538.png" alt="Coach Cbonza" class="id-photo">
         <h3>COACH CBONZA</h3>
         <div class="schedule-box">
-            • 05:00 - 06:00 (Mon-Sat)<br>
-            • 17:00 - 19:00 (Mon-Thu)<br>
-            • 18:00 - 19:00 (Mon-Thu)
+            • 05:00 - 06:00 (Mon-Sat) <span class="price-tag">R250</span><br>
+            • 17:00 - 19:00 (Mon-Thu) <span class="price-tag">R150</span><br>
+            • 18:00 - 19:00 (Mon-Thu) <span class="price-tag">R150</span>
         </div>
         <a href="https://wa.me/27679818629" class="btn-wa">WHATSAPP COACH</a>
     </div>
@@ -44,7 +46,7 @@
         <img src="IMG_1539.png" alt="Coach Lungisa" class="id-photo">
         <h3>COACH LUNGISA</h3>
         <div class="schedule-box">
-            • 18:00 - 19:00 (Mon-Thu)
+            • 18:00 - 19:00 (Mon-Thu) <span class="price-tag">R200</span>
         </div>
         <p style="font-size:10px; color:#aaa;">KwaMashu E Section ScoutHall</p>
         <a href="https://wa.me/27620296345" class="btn-wa">WHATSAPP COACH</a>
@@ -54,7 +56,7 @@
         <img src="IMG_1540.png" alt="Coach Linda" class="id-photo">
         <h3>COACH LINDA</h3>
         <div class="schedule-box">
-            • 18:00 - 19:00
+            • 18:00 - 19:00 (Mon-Thu) <span class="price-tag">R250</span>
         </div>
         <p style="font-size:10px; color:#aaa;">Newlands West Midways Crossing</p>
         <a href="https://wa.me/27625600946" class="btn-wa">WHATSAPP COACH</a>
@@ -62,9 +64,9 @@
 </div>
 
 <center>
-    <a href="Event.html" style="background:#4b0082; color:white; text-decoration:none; padding:15px 25px; display:inline-block; margin:20px 0; border-radius:5px; font-weight:bold;">🏆 WORLD CUP OF AEROBICS DETAILS →</a>
+    <a href="event.html" style="background:#4b0082; color:white; text-decoration:none; padding:15px 25px; display:inline-block; margin:20px 0; border-radius:5px; font-weight:bold;">🏆 WORLD CUP OF AEROBICS DETAILS →</a>
     <br>
-    <a href="mailto:yoursite@secure.com" style="color:#666; font-size:11px; text-decoration:none;">✉️ Secure Administration Portal</a>
+    <a href="mailto:support@yourdomain.com" class="btn-secure">✉️ Contact Administration</a>
 </center>
 
 <script>
