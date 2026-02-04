@@ -2,24 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aerobics Music | TFA</title>
+    <title>TFA | Music Mixtape</title>
     <style>
-        body { background: #050505; color: white; font-family: sans-serif; padding: 20px; text-align: center; }
-        .mix-card { background: #1a1a1a; padding: 20px; border-radius: 15px; margin-top: 20px; border: 1px solid #4b0082; }
-        .audio-player { width: 100%; margin-top: 15px; filter: invert(1); } /* Makes player match dark theme */
-        .back-btn { color: #25D366; text-decoration: none; font-weight: bold; display: block; margin-bottom: 20px; }
+        :root { --bein-purple: #4b0082; --bein-green: #25D366; --bein-font: 'Arial Narrow', sans-serif; }
+        body { background: #050505; color: white; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; text-align: center; }
+        
+        .back-btn { display: inline-block; color: white; background: var(--bein-purple); padding: 8px 15px; text-decoration: none; border-radius: 5px; font-weight: 900; margin-bottom: 20px; border: 1px solid var(--bein-green); font-family: var(--bein-font); text-transform: uppercase; }
+        
+        .mix-container { background: #111; border: 2px solid var(--bein-purple); border-radius: 15px; padding: 30px; margin-top: 10px; position: relative; overflow: hidden; }
+        .mix-container::before { content: ""; position: absolute; top: 0; left: 0; width: 5px; height: 100%; background: var(--bein-green); }
+        
+        h1 { font-family: var(--bein-font); font-weight: 900; text-transform: uppercase; color: var(--bein-green); letter-spacing: 1px; }
+        .song-title { font-size: 22px; font-weight: 900; margin-bottom: 5px; font-family: var(--bein-font); }
+        .song-sub { color: #888; margin-bottom: 20px; font-size: 14px; }
+
+        /* The Player Frame */
+        .player-frame { width: 100%; height: 150px; border-radius: 10px; border: none; background: transparent; }
+        
+        .download-btn { display: block; margin-top: 25px; background: var(--bein-green); color: black; padding: 12px; text-decoration: none; border-radius: 8px; font-weight: 900; font-family: var(--bein-font); text-transform: uppercase; }
     </style>
 </head>
 <body>
-    <a href="index.html" class="back-btn">← BACK TO DASHBOARD</a>
-    <h1>🏃 Aerobics Mixtapes</h1>
-    <div class="mix-card">
-        <strong>TFA Summer Mix Vol. 1</strong>
-        <p>140 BPM - High Energy</p>
-        <audio controls class="audio-player">
-            <source src="your-mixtape.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+    <a href="index.html" class="back-btn">← RETURN TO DASHBOARD</a>
+    
+    <div class="mix-container">
+        <h1>🏃 AEROBICS MIXTAPE</h1>
+        <div class="song-title">TFA SUMMER BATTLE VOL. 1</div>
+        <div class="song-sub">140 BPM • 45 MINUTES • HIGH INTENSITY</div>
+
+        <iframe class="player-frame" src="https://docs.google.com/viewer?srcid=YOUR_FILE_ID&pid=explorer&efp=true&a=v&chrome=false&embedded=true"></iframe>
+        
+        <p style="font-size: 12px; color: #555; margin-top: 10px;">If player doesn't load, use the link below:</p>
+        <a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" target="_blank" class="download-btn">OPEN MIX IN DRIVE</a>
     </div>
+
+    <div style="margin-top: 40px; color: #333; font-weight: 900; font-family: var(--bein-font);">TFA YOMPHAKATHI AUDIO NETWORK</div>
 </body>
 </html>
