@@ -3,72 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TFA | beIN Dashboard</title>
+    <title>TFA | beIN Sports</title>
     <style>
-        body { background: #050505; color: #ffffff; font-family: 'Segoe UI', sans-serif; margin: 0; padding-bottom: 100px; text-align: center; }
+        /* Shared Styles */
+        body { background: #050505; color: #ffffff; font-family: 'Segoe UI', sans-serif; margin: 0; overflow-x: hidden; }
+        
+        /* Startup Screen Styling */
+        #startup-screen {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+            background: #ffffff; display: flex; justify-content: center;
+            align-items: center; z-index: 9999; transition: opacity 0.8s ease;
+        }
+        .bein-logo { display: flex; font-size: 40px; font-weight: bold; border: 3px solid #4b0082; border-radius: 8px; overflow: hidden; }
+        .b-left { padding: 10px 20px; color: #4b0082; background: white; }
+        .b-right { padding: 10px 20px; color: white; background: #4b0082; }
+
+        /* Dashboard Styling */
         .header-bein { background: linear-gradient(135deg, #4b0082, #1a0033); padding: 25px; border-bottom: 4px solid #25D366; position: relative; }
         .live-indicator { position: absolute; top: 15px; left: 15px; background: rgba(0,0,0,0.7); padding: 5px 12px; border-radius: 20px; font-size: 11px; font-weight: bold; border: 1px solid #25D366; }
         .red-dot { height: 8px; width: 8px; background-color: #ff0000; border-radius: 50%; display: inline-block; margin-right: 5px; animation: blink 1s infinite; }
         @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }
-        .countdown-strip { background: #25D366; color: #000; padding: 10px; font-weight: 900; font-size: 18px; text-transform: uppercase; }
-        .world-cup-card { background: #1a1a1a; border: 2px solid #25D366; padding: 20px; margin: 20px auto; width: 90%; max-width: 500px; border-radius: 10px; }
-        .btn-wa-worldcup { display: block; background: #4b0082; color: white; padding: 15px; text-decoration: none; font-weight: bold; border-radius: 5px; margin-top: 10px; border: 1px solid #25D366; }
+        .countdown-strip { background: #25D366; color: #000; padding: 10px; font-weight: 900; font-size: 18px; text-transform: uppercase; text-align: center; }
         .container { padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
-        .coach-card { background: #111; border: 1px solid #333; border-top: 5px solid #4b0082; padding: 25px; border-radius: 4px; text-align: left; overflow: hidden; }
+        .coach-card { background: #111; border: 1px solid #333; border-top: 5px solid #4b0082; padding: 25px; border-radius: 4px; text-align: left; }
         .id-photo { width: 100px; height: 130px; border: 2px solid #c0c0c0; float: left; margin-right: 15px; object-fit: cover; }
         .btn-wa { display: block; background: #25D366; color: #000; text-align: center; padding: 12px; text-decoration: none; font-weight: 900; clear: both; margin-top: 15px; border-radius: 4px; }
     </style>
 </head>
 <body>
 
-<div class="header-bein">
-    <div class="live-indicator"><span class="red-dot"></span> LIVE DASHBOARD</div>
-    <h1 style="margin:0;">TOTAL FITNESS ACADEMY</h1>
-</div>
-
-<div class="countdown-strip" id="timer">TFA LIVE</div>
-
-<div class="world-cup-card">
-    <h2 style="margin:0; color:#25D366;">🏆 WORLD CUP OF AEROBICS</h2>
-    <p style="margin:5px 0;">Registration Entry: R300</p>
-    <a href="https://wa.me/27620296345?text=I%20want%20to%20register%20for%20the%20World%20Cup" class="btn-wa-worldcup">REGISTER (COACH LUNGISA)</a>
-</div>
-
-<div class="container">
-    <div class="coach-card">
-        <img src="IMG_1538.png" class="id-photo">
-        <h3 style="margin:0;">COACH CBONZA</h3>
-        <p style="color:#25D366; font-size:12px;">📍 KwaMashu K Section</p>
-        <a href="https://wa.me/27679818629" class="btn-wa">WHATSAPP COACH</a>
+    <div id="startup-screen">
+        <div class="bein-logo">
+            <div class="b-left">beIN</div>
+            <div class="b-right">TFA</div>
+        </div>
     </div>
 
-    <div class="coach-card">
-        <img src="IMG_1539.png" class="id-photo">
-        <h3 style="margin:0;">COACH LUNGISA</h3>
-        <p style="color:#25D366; font-size:12px;">📍 KwaMashu E Section</p>
-        <a href="https://wa.me/27620296345" class="btn-wa">WHATSAPP COACH</a>
+    <div id="main-content">
+        <div class="header-bein">
+            <div class="live-indicator"><span class="red-dot"></span> LIVE DASHBOARD</div>
+            <h1 style="text-align: center; margin: 0;">TOTAL FITNESS ACADEMY</h1>
+        </div>
+
+        <div class="countdown-strip">BROADCAST ACTIVE</div>
+
+        <div class="container">
+            <div class="coach-card">
+                <img src="IMG_1538.png" class="id-photo">
+                <h3 style="margin:0;">COACH CBONZA</h3>
+                <p style="color:#25D366; font-size:12px;">📍 KwaMashu K Section</p>
+                <a href="https://wa.me/27679818629" class="btn-wa">WHATSAPP COACH</a>
+            </div>
+
+            <div class="coach-card">
+                <img src="IMG_1539.png" class="id-photo">
+                <h3 style="margin:0;">COACH LUNGISA</h3>
+                <p style="color:#25D366; font-size:12px;">📍 KwaMashu E Section</p>
+                <a href="https://wa.me/27620296345" class="btn-wa">WHATSAPP COACH</a>
+            </div>
+        </div>
     </div>
 
-    <div class="coach-card">
-        <img src="IMG_1540.png" class="id-photo">
-        <h3 style="margin:0;">COACH LINDA</h3>
-        <p style="color:#25D366; font-size:12px;">📍 Newlands West</p>
-        <a href="https://wa.me/27625600946" class="btn-wa">WHATSAPP COACH</a>
-    </div>
-</div>
-
-<script>
-    const eventDate = new Date("July 25, 2026 08:00:00").getTime();
-    setInterval(function() {
-        const now = new Date().getTime();
-        const d = eventDate - now;
-        const days = Math.floor(d / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((d % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((d % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((d % (1000 * 60)) / 1000);
-        document.getElementById("timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s UNTIL WORLD CUP";
-    }, 1000);
-</script>
+    <script>
+        // Startup Logic
+        setTimeout(() => {
+            const startup = document.getElementById('startup-screen');
+            startup.style.opacity = '0';
+            setTimeout(() => {
+                startup.style.display = 'none';
+            }, 800);
+        }, 3000); // 3 seconds of "beIN TFA" logo
+    </script>
 
 </body>
 </html>
