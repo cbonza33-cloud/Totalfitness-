@@ -1,17 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>World Cup Of Aerobics</title>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Cup Of Aerobics | TFA</title>
     <style>
-        body { background: #050505; color: white; font-family: sans-serif; padding: 20px; }
-        .back-btn { color: #25D366; text-decoration: none; font-weight: bold; }
+        body { background: #050505; color: white; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; }
+        .back-btn { display: inline-block; color: white; background: #4b0082; padding: 8px 15px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-bottom: 20px; border: 1px solid #25D366; }
+        .event-card { border: 2px solid #25D366; padding: 20px; border-radius: 15px; background: #111; }
+        .price-hero { font-size: 40px; color: #25D366; font-weight: 900; margin: 10px 0; }
+        .detail-row { margin: 15px 0; padding-bottom: 10px; border-bottom: 1px solid #333; }
+        h1 { color: #25D366; text-transform: uppercase; font-size: 24px; }
     </style>
 </head>
 <body>
-    <a href="index.html" class="back-btn">← Back to Dashboard</a>
-    <h1>🏆 World Cup Of Aerobics</h1>
-    <p>This is the TFA annual flagship event. Join thousands of participants for the ultimate showdown.</p>
+    <a href="index.html" class="back-btn">← DASHBOARD</a>
+    <div class="event-card">
+        <h1>🏆 WORLD CUP OF AEROBICS</h1>
+        <p>The ultimate flagship competition of Total Fitness Academy.</p>
+        
+        <div class="price-hero">R300</div>
+        <p>ENTRY TICKET PRICE</p>
+
+        <div class="detail-row">
+            <strong>📍 VENUE</strong><br>
+            KwaMashu L Community Hall
+        </div>
+
+        <div class="detail-row">
+            <strong>🕒 TIME</strong><br>
+            08:00 AM - 20:00 PM
+        </div>
+
+        <div class="detail-row">
+            <strong>🔥 COMPETITION CATEGORIES</strong>
+            <ul style="padding-left: 20px;">
+                <li>Solo Endurance Performance</li>
+                <li>Team Sync Choreography</li>
+                <li>HIIT Speed Challenge</li>
+                <li>Instructor Masterclass Battle</li>
+            </ul>
+        </div>
+        
+        <a href="https://wa.me/27620296345?text=I%20want%20to%20buy%20a%20World%20Cup%20Ticket" style="display: block; background: #25D366; color: #000; text-align: center; padding: 15px; text-decoration: none; font-weight: 900; border-radius: 8px; margin-top: 20px;">BOOK YOUR TICKET</a>
+    </div>
 </body>
 </html>
