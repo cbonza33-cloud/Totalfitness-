@@ -2,21 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aerobics News | TFA</title>
+    <title>TFA | News Room</title>
     <style>
-        body { background: white; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; }
-        .news-item { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        .date { color: #888; font-size: 12px; }
-        .back-btn { color: #4b0082; text-decoration: none; font-weight: bold; }
+        :root { --bein-purple: #4b0082; --bein-green: #25D366; --bein-font: 'Arial Narrow', sans-serif; }
+        body { background: #f4f4f7; color: #1a1a1a; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; }
+        
+        .back-btn { display: inline-block; color: white; background: var(--bein-purple); padding: 8px 15px; text-decoration: none; border-radius: 5px; font-weight: 900; margin-bottom: 20px; font-family: var(--bein-font); text-transform: uppercase; }
+        
+        /* Breaking News Ticker */
+        .breaking-tag { background: #ff0000; color: white; padding: 5px 10px; font-weight: 900; font-family: var(--bein-font); display: inline-block; margin-bottom: 10px; }
+        
+        .news-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 5px solid var(--bein-purple); margin-bottom: 20px; }
+        .news-content { padding: 20px; }
+        .news-title { font-family: var(--bein-font); font-size: 24px; font-weight: 900; text-transform: uppercase; line-height: 1; margin-bottom: 10px; }
+        .news-date { color: #888; font-size: 12px; margin-bottom: 15px; display: block; }
+        
+        .highlight-box { background: #f0f0f0; border-left: 4px solid var(--bein-green); padding: 15px; margin: 15px 0; font-weight: bold; }
+        .btn-buy { background: var(--bein-green); color: black; text-align: center; padding: 15px; text-decoration: none; border-radius: 8px; font-weight: 900; display: block; font-family: var(--bein-font); text-transform: uppercase; }
     </style>
 </head>
 <body>
-    <a href="index.html" class="back-btn">← BACK</a>
-    <h1>📢 Aerobics News</h1>
-    <div class="news-item">
-        <span class="date">February 4, 2024</span>
-        <h3>TFA Membership Hits New Record!</h3>
-        <p>We are proud to announce that over 500 new members joined TFA this month across KZN.</p>
+    <a href="index.html" class="back-btn">← DASHBOARD</a>
+
+    <div class="news-card">
+        <div class="news-content">
+            <div class="breaking-tag">BREAKING NEWS</div>
+            <span class="news-date">FEBRUARY 4, 2026</span>
+            <div class="news-title">WORLD CUP OF AEROBICS: TICKETS NOW ON SALE!</div>
+            
+            <p>The wait is over! Total Fitness Academy has officially opened registrations for the highly anticipated <strong>World Cup of Aerobics</strong>.</p>
+            
+            <div class="highlight-box">
+                📍 VENUE: KwaMashu L Community Hall<br>
+                💰 PRICE: R300 Per Person<br>
+                ⏰ TIME: 08:00 - 20:00
+            </div>
+
+            <p>Prepare for a full day of categories including Solo Endurance, Team Sync, and the legendary Instructor Battle. Secure your spot before the hall hits capacity!</p>
+            
+            <a href="https://wa.me/27620296345?text=I%20saw%20the%20News!%20I%20want%20to%20buy%20a%20World%20Cup%20Ticket" class="btn-buy">GET TICKETS NOW</a>
+        </div>
     </div>
 </body>
 </html>
