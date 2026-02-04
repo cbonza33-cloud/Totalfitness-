@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TFA | beIN Sports</title>
+    <title>TFA | Eyomphakathi</title>
     <style>
         /* Shared Styles */
         body { background: #050505; color: #ffffff; font-family: 'Segoe UI', sans-serif; margin: 0; overflow-x: hidden; }
@@ -14,9 +14,9 @@
             background: #ffffff; display: flex; justify-content: center;
             align-items: center; z-index: 9999; transition: opacity 0.8s ease;
         }
-        .bein-logo { display: flex; font-size: 40px; font-weight: bold; border: 3px solid #4b0082; border-radius: 8px; overflow: hidden; }
-        .b-left { padding: 10px 20px; color: #4b0082; background: white; }
-        .b-right { padding: 10px 20px; color: white; background: #4b0082; }
+        .bein-logo { display: flex; font-size: 32px; font-weight: bold; border: 3px solid #4b0082; border-radius: 8px; overflow: hidden; text-transform: uppercase; }
+        .b-left { padding: 10px 15px; color: #4b0082; background: white; }
+        .b-right { padding: 10px 15px; color: white; background: #4b0082; }
 
         /* Dashboard Styling */
         .header-bein { background: linear-gradient(135deg, #4b0082, #1a0033); padding: 25px; border-bottom: 4px solid #25D366; position: relative; }
@@ -34,15 +34,15 @@
 
     <div id="startup-screen">
         <div class="bein-logo">
-            <div class="b-left">beIN</div>
-            <div class="b-right">TFA</div>
+            <div class="b-left">TFA</div>
+            <div class="b-right">EYOMPHAKATHI</div>
         </div>
     </div>
 
     <div id="main-content">
         <div class="header-bein">
             <div class="live-indicator"><span class="red-dot"></span> LIVE DASHBOARD</div>
-            <h1 style="text-align: center; margin: 0;">TOTAL FITNESS ACADEMY</h1>
+            <h1 style="text-align: center; margin: 0; font-size: 24px;">TOTAL FITNESS ACADEMY</h1>
         </div>
 
         <div class="countdown-strip">BROADCAST ACTIVE</div>
@@ -61,6 +61,13 @@
                 <p style="color:#25D366; font-size:12px;">📍 KwaMashu E Section</p>
                 <a href="https://wa.me/27620296345" class="btn-wa">WHATSAPP COACH</a>
             </div>
+
+             <div class="coach-card">
+                <img src="IMG_1540.png" class="id-photo">
+                <h3 style="margin:0;">COACH LINDA</h3>
+                <p style="color:#25D366; font-size:12px;">📍 Newlands West</p>
+                <a href="https://wa.me/27625600946" class="btn-wa">WHATSAPP COACH</a>
+            </div>
         </div>
     </div>
 
@@ -72,7 +79,7 @@
             setTimeout(() => {
                 startup.style.display = 'none';
             }, 800);
-        }, 3000); // 3 seconds of "beIN TFA" logo
+        }, 2500); // 2.5 seconds display
     </script>
 
 </body>
