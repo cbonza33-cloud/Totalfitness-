@@ -4,15 +4,22 @@
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aerobics Music | TFA</title>
     <style>
-        body { background: #050505; color: white; font-family: sans-serif; padding: 20px; }
-        .mix-card { background: #1a1a1a; padding: 20px; border-radius: 10px; margin-top: 15px; border: 1px solid #4b0082; display: flex; align-items: center; justify-content: space-between; }
-        .play-icon { font-size: 30px; color: #25D366; }
+        body { background: #050505; color: white; font-family: sans-serif; padding: 20px; text-align: center; }
+        .mix-card { background: #1a1a1a; padding: 20px; border-radius: 15px; margin-top: 20px; border: 1px solid #4b0082; }
+        .audio-player { width: 100%; margin-top: 15px; filter: invert(1); } /* Makes player match dark theme */
+        .back-btn { color: #25D366; text-decoration: none; font-weight: bold; display: block; margin-bottom: 20px; }
     </style>
 </head>
 <body>
-    <a href="index.html" style="color:white; text-decoration:none">← BACK</a>
+    <a href="index.html" class="back-btn">← BACK TO DASHBOARD</a>
     <h1>🏃 Aerobics Mixtapes</h1>
-    <div class="mix-card"><div><strong>Volume 1: High Tempo</strong><br>140 BPM - Non-stop</div><div class="play-icon">▶</div></div>
-    <div class="mix-card"><div><strong>Volume 2: Step Mastery</strong><br>132 BPM - House Mix</div><div class="play-icon">▶</div></div>
+    <div class="mix-card">
+        <strong>TFA Summer Mix Vol. 1</strong>
+        <p>140 BPM - High Energy</p>
+        <audio controls class="audio-player">
+            <source src="your-mixtape.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
 </body>
 </html>
