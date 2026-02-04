@@ -2,40 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TFA | Music Mixtape</title>
+    <title>TFA | Audio Network</title>
     <style>
         :root { --bein-purple: #4b0082; --bein-green: #25D366; --bein-font: 'Arial Narrow', sans-serif; }
         body { background: #050505; color: white; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; text-align: center; }
         
         .back-btn { display: inline-block; color: white; background: var(--bein-purple); padding: 8px 15px; text-decoration: none; border-radius: 5px; font-weight: 900; margin-bottom: 20px; border: 1px solid var(--bein-green); font-family: var(--bein-font); text-transform: uppercase; }
         
-        .mix-container { background: #111; border: 2px solid var(--bein-purple); border-radius: 15px; padding: 30px; margin-top: 10px; position: relative; overflow: hidden; }
-        .mix-container::before { content: ""; position: absolute; top: 0; left: 0; width: 5px; height: 100%; background: var(--bein-green); }
+        .mix-card { background: #111; border: 2px solid var(--bein-purple); border-radius: 15px; padding: 30px; margin-top: 10px; position: relative; overflow: hidden; }
+        .mix-card::before { content: "LIVE AUDIO"; position: absolute; top: 10px; right: 10px; background: red; color: white; font-size: 10px; padding: 2px 6px; font-weight: bold; border-radius: 3px; animation: blink 1s infinite; }
+        @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }
         
-        h1 { font-family: var(--bein-font); font-weight: 900; text-transform: uppercase; color: var(--bein-green); letter-spacing: 1px; }
-        .song-title { font-size: 22px; font-weight: 900; margin-bottom: 5px; font-family: var(--bein-font); }
-        .song-sub { color: #888; margin-bottom: 20px; font-size: 14px; }
+        h1 { font-family: var(--bein-font); font-weight: 900; text-transform: uppercase; color: var(--bein-green); margin-bottom: 5px; }
+        .song-title { font-size: 24px; font-weight: 900; font-family: var(--bein-font); text-transform: uppercase; }
 
-        /* The Player Frame */
-        .player-frame { width: 100%; height: 150px; border-radius: 10px; border: none; background: transparent; }
+        /* The beIN Style Player Container */
+        .player-wrapper { margin: 20px 0; background: #000; border-radius: 10px; padding: 10px; border: 1px solid #333; }
+        iframe { width: 100%; height: 60px; border: none; }
         
-        .download-btn { display: block; margin-top: 25px; background: var(--bein-green); color: black; padding: 12px; text-decoration: none; border-radius: 8px; font-weight: 900; font-family: var(--bein-font); text-transform: uppercase; }
+        .action-btn { display: block; margin-top: 20px; background: var(--bein-green); color: black; padding: 15px; text-decoration: none; border-radius: 8px; font-weight: 900; font-family: var(--bein-font); text-transform: uppercase; letter-spacing: 1px; }
     </style>
 </head>
 <body>
     <a href="index.html" class="back-btn">← RETURN TO DASHBOARD</a>
     
-    <div class="mix-container">
-        <h1>🏃 AEROBICS MIXTAPE</h1>
-        <div class="song-title">TFA SUMMER BATTLE VOL. 1</div>
-        <div class="song-sub">140 BPM • 45 MINUTES • HIGH INTENSITY</div>
+    <div class="mix-card">
+        <h1>🏃 MIXTAPE CHANNEL</h1>
+        <div class="song-title">WORLD CUP WARM-UP MIX</div>
+        <p style="color: #888; font-size: 14px;">Total Fitness Academy Official Mixtape</p>
 
-        <iframe class="player-frame" src="https://docs.google.com/viewer?srcid=YOUR_FILE_ID&pid=explorer&efp=true&a=v&chrome=false&embedded=true"></iframe>
+        <div class="player-wrapper">
+            <iframe src="https://docs.google.com/viewer?srcid=PASTE_YOUR_ID_HERE&pid=explorer&efp=true&a=v&chrome=false&embedded=true"></iframe>
+        </div>
         
-        <p style="font-size: 12px; color: #555; margin-top: 10px;">If player doesn't load, use the link below:</p>
-        <a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" target="_blank" class="download-btn">OPEN MIX IN DRIVE</a>
+        <a href="https://drive.google.com/file/d/PASTE_YOUR_ID_HERE/view" target="_blank" class="action-btn">LISTEN FULL SCREEN</a>
     </div>
 
-    <div style="margin-top: 40px; color: #333; font-weight: 900; font-family: var(--bein-font);">TFA YOMPHAKATHI AUDIO NETWORK</div>
+    <p style="margin-top: 50px; color: #444; font-family: var(--bein-font); font-weight: 900;">TFA YOMPHAKATHI • BROADCAST QUALITY AUDIO</p>
 </body>
 </html>
