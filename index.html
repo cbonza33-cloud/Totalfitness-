@@ -1,63 +1,42 @@
-<div class="video-hero">
-    <video autoplay muted loop playsinline webkit-playsinline preload="auto" style="width:100%; height:100%; object-fit:cover;">
-        <source src="db201ad6-b4ad-4aa3-8b3b-1763f84d4be1.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <div class="video-label">▶ TFA | Previous Event Highlights</div>
-</div>
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TFA | Eyomphakathi</title>
+    <title>TFA | Yomphakathi</title>
     <style>
-        body { background: #f4f4f7; color: #1a1a1a; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 0; padding-bottom: 100px; overflow-x: hidden; }
+        body { background: #f4f4f7; color: #1a1a1a; font-family: 'Segoe UI', sans-serif; margin: 0; padding-bottom: 100px; }
+        .bein-header { background: #ffffff; padding: 10px; display: flex; justify-content: center; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
+        /* Updated Branding Box */
+        .bein-logo-box { display: flex; font-size: 18px; font-weight: bold; border: 2px solid #4b0082; border-radius: 5px; overflow: hidden; }
+        .logo-t { padding: 4px 12px; color: #4b0082; background: white; }
+        .logo-a { padding: 4px 12px; color: white; background: #4b0082; }
         
-        /* beIN Header */
-        .bein-header { background: #ffffff; padding: 10px; display: flex; justify-content: center; align-items: center; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
-        .bein-logo-box { display: flex; font-size: 20px; font-weight: bold; border: 2px solid #4b0082; border-radius: 5px; overflow: hidden; }
-        .logo-t { padding: 4px 10px; color: #4b0082; background: white; }
-        .logo-a { padding: 4px 10px; color: white; background: #4b0082; }
-
-        /* League Scroller */
         .league-scroller { display: flex; overflow-x: auto; padding: 15px 10px; background: white; gap: 20px; border-bottom: 1px solid #eee; }
-        .league-item { min-width: 60px; text-align: center; font-size: 10px; font-weight: bold; color: #444; }
+        .league-item { min-width: 60px; text-align: center; font-size: 10px; font-weight: bold; }
         .league-icon { width: 45px; height: 45px; background: #eee; border-radius: 50%; margin-bottom: 5px; display: flex; align-items: center; justify-content: center; font-size: 20px; border: 1px solid #ddd; }
-
-        /* Hero Video Section */
         .video-hero { width: 100%; aspect-ratio: 16 / 9; background: #000; position: relative; }
-        .video-hero video { width: 100%; height: 100%; object-fit: cover; }
         .video-label { position: absolute; bottom: 15px; left: 15px; background: rgba(0,0,0,0.6); color: white; padding: 8px 12px; border-radius: 5px; font-weight: bold; font-size: 14px; }
-
-        /* Instructor Grid */
-        .section-title { padding: 15px; font-size: 18px; font-weight: bold; color: #4b0082; display: flex; justify-content: space-between; align-items: center; }
+        .section-title { padding: 15px; font-size: 18px; font-weight: bold; color: #4b0082; }
         .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 15px; padding: 0 15px; }
-        .coach-card { background: white; border-radius: 12px; padding: 15px; display: flex; flex-direction: column; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border: 1px solid #eee; }
-        .coach-top { display: flex; gap: 15px; margin-bottom: 10px; }
+        .coach-card { background: white; border-radius: 12px; padding: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border: 1px solid #eee; }
+        .coach-top { display: flex; gap: 15px; }
         .id-photo { width: 85px; height: 105px; border-radius: 8px; object-fit: cover; background: #eee; }
-        .coach-info { flex: 1; }
-        .coach-info h3 { margin: 0; font-size: 16px; color: #1a1a1a; text-transform: uppercase; }
-        .coach-info p { margin: 4px 0; font-size: 11px; color: #666; }
-        .price-row { display: flex; gap: 8px; margin-top: 4px; }
-        .tag { font-size: 10px; padding: 2px 6px; border-radius: 4px; font-weight: bold; }
+        .tag { font-size: 10px; padding: 2px 6px; border-radius: 4px; font-weight: bold; margin-right: 5px; }
         .tag-time { background: #f0e6ff; color: #4b0082; }
         .tag-price { background: #e8f9ee; color: #25D366; }
-        .btn-wa { background: #25D366; color: white; text-align: center; padding: 10px; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 10px; font-size: 13px; }
-
-        /* Bottom Nav */
-        .bottom-nav { position: fixed; bottom: 0; width: 100%; background: white; display: flex; justify-content: space-around; padding: 10px 0; border-top: 1px solid #ddd; z-index: 1000; }
+        .btn-wa { background: #25D366; color: white; text-align: center; padding: 10px; text-decoration: none; border-radius: 8px; font-weight: bold; display: block; margin-top: 10px; }
+        .bottom-nav { position: fixed; bottom: 0; width: 100%; background: white; display: flex; justify-content: space-around; padding: 10px 0; border-top: 1px solid #ddd; }
         .nav-link { text-align: center; text-decoration: none; color: #666; font-size: 10px; font-weight: bold; }
         .nav-link.active { color: #4b0082; }
-        .nav-link b { display: block; font-size: 20px; margin-bottom: 3px; }
     </style>
 </head>
 <body>
 
     <header class="bein-header">
         <div class="bein-logo-box">
-            <div class="logo-t">beIN</div>
-            <div class="logo-a">TFA</div>
+            <div class="logo-t">TFA</div>
+            <div class="logo-a">YOMPHAKATHI</div>
         </div>
     </header>
 
@@ -67,90 +46,52 @@
         <div class="league-item"><div class="league-icon">🔥</div>HIT</div>
         <div class="league-item"><div class="league-icon">🏃</div>STEP</div>
         <div class="league-item"><div class="league-icon">📢</div>NEWS</div>
-    </div><div class="video-hero">
-    <video autoplay muted loop playsinline webkit-playsinline preload="auto" style="width:100%; height:100%; object-fit:cover;">
-        <source src="b4ad-4aa3-8b3b-1763f84d4be1.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <div class="video-label">▶ TFA | Previous Event Highlights</div>
-</div>
-
+    </div>
 
     <div class="video-hero">
-        <video autoplay muted loop playsinline>
-            <source src="b4ad-4aa3-8b3b-1763f84d4be1.mp4" type="video/mp4">
+        <video autoplay muted loop playsinline webkit-playsinline preload="auto" style="width:100%; height:100%; object-fit:cover;">
+            <source src="db201ad6-b4ad-4aa3-8b3b-1763f84d4be1.mp4" type="video/mp4">
         </video>
         <div class="video-label">▶ TFA | Previous Event Highlights</div>
     </div>
 
-    <div class="section-title">
-        <span>30 LEAD INSTRUCTORS</span>
-    </div>
+    <div class="section-title">30 LEAD INSTRUCTORS</div>
 
     <div class="grid-container" id="coach-grid">
         <div class="coach-card">
             <div class="coach-top">
                 <img src="IMG_1538.png" class="id-photo">
                 <div class="coach-info">
-                    <h3>COACH CBONZA</h3>
-                    <p>📍 KwaMashu K Section</p>
-                    <div class="price-row"><span class="tag tag-time">AM 05:00</span><span class="tag tag-price">R250</span></div>
-                    <div class="price-row"><span class="tag tag-time">PM 17:00</span><span class="tag tag-price">R150</span></div>
+                    <h3 style="margin:0">COACH CBONZA</h3>
+                    <p style="margin:4px 0; font-size:12px">📍 KwaMashu K Section</p>
+                    <span class="tag tag-time">AM 05:00</span><span class="tag tag-price">R250</span><br>
+                    <span class="tag tag-time">PM 17:00</span><span class="tag tag-price">R150</span>
                 </div>
             </div>
             <a href="https://wa.me/27679818629" class="btn-wa">CONNECT ON WHATSAPP</a>
         </div>
-
-        <div class="coach-card">
-            <div class="coach-top">
-                <img src="IMG_1539.png" class="id-photo">
-                <div class="coach-info">
-                    <h3>COACH LUNGISA</h3>
-                    <p>📍 KwaMashu E Section</p>
-                    <div class="price-row"><span class="tag tag-time">PM 18:00</span><span class="tag tag-price">R200</span></div>
-                </div>
-            </div>
-            <a href="https://wa.me/27620296345" class="btn-wa">CONNECT ON WHATSAPP</a>
-        </div>
-
-        <div class="coach-card">
-            <div class="coach-top">
-                <img src="IMG_1540.png" class="id-photo">
-                <div class="coach-info">
-                    <h3>COACH LINDA</h3>
-                    <p>📍 Newlands West</p>
-                    <div class="price-row"><span class="tag tag-time">PM 18:00</span><span class="tag tag-price">R250</span></div>
-                </div>
-            </div>
-            <a href="https://wa.me/27625600946" class="btn-wa">CONNECT ON WHATSAPP</a>
-        </div>
-
-        <script>
-            const grid = document.getElementById('coach-grid');
-            for(let i = 4; i <= 30; i++) {
-                grid.innerHTML += `
-                <div class="coach-card" style="opacity: 0.6;">
-                    <div class="coach-top">
-                        <div class="id-photo" style="display:flex; align-items:center; justify-content:center; color:#ccc;">?</div>
-                        <div class="coach-info">
-                            <h3>INSTRUCTOR ${i}</h3>
-                            <p>📍 Location TBC</p>
-                            <div class="price-row"><span class="tag tag-time">TBC</span><span class="tag tag-price">R--</span></div>
-                        </div>
-                    </div>
-                    <a href="#" class="btn-wa" style="background:#999;">SLOT OPEN</a>
-                </div>`;
-            }
-        </script>
     </div>
 
     <nav class="bottom-nav">
-        <a href="#" class="nav-link active"><b>🏠</b>Home</a>
-        <a href="#" class="nav-link"><b>🏆</b>Events</a>
-        <a href="#" class="nav-link"><b>🎬</b>Videos</a>
-        <a href="#" class="nav-link"><b>📡</b>Live</a>
-        <a href="#" class="nav-link"><b>📋</b>Guide</a>
+        <a href="#" class="nav-link active">🏠<br>Home</a>
+        <a href="#" class="nav-link">🏆<br>Events</a>
+        <a href="#" class="nav-link">🎬<br>Videos</a>
+        <a href="#" class="nav-link">📡<br>Live</a>
+        <a href="#" class="nav-link">📋<br>Guide</a>
     </nav>
 
+    <script>
+        const grid = document.getElementById('coach-grid');
+        const coaches = [
+            {name: "COACH LUNGISA", loc: "KwaMashu E Section", time: "PM 18:00", price: "R200", wa: "27620296345", img: "IMG_1539.png"},
+            {name: "COACH LINDA", loc: "Newlands West", time: "PM 18:00", price: "R250", wa: "27625600946", img: "IMG_1540.png"}
+        ];
+        coaches.forEach(c => {
+            grid.innerHTML += `<div class="coach-card"><div class="coach-top"><img src="${c.img}" class="id-photo"><div class="coach-info"><h3 style="margin:0">${c.name}</h3><p style="margin:4px 0; font-size:12px">📍 ${c.loc}</p><span class="tag tag-time">${c.time}</span><span class="tag tag-price">${c.price}</span></div></div><a href="https://wa.me/${c.wa}" class="btn-wa">CONNECT ON WHATSAPP</a></div>`;
+        });
+        for(let i = 4; i <= 30; i++) {
+            grid.innerHTML += `<div class="coach-card" style="opacity:0.5"><div class="coach-top"><div class="id-photo" style="display:flex;align-items:center;justify-content:center">?</div><div class="coach-info"><h3 style="margin:0">INSTRUCTOR ${i}</h3><p style="margin:4px 0; font-size:12px">📍 TBC</p></div></div><a href="#" class="btn-wa" style="background:#ccc">SLOT OPEN</a></div>`;
+        }
+    </script>
 </body>
 </html>
