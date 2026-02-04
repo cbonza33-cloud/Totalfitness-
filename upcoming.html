@@ -2,25 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upcoming Events | TFA</title>
+    <title>Register | TFA</title>
     <style>
         body { background: #f4f4f7; font-family: sans-serif; margin: 0; padding: 20px; }
-        .event-detail { background: white; border-radius: 12px; overflow: hidden; border: 1px solid #ddd; }
-        .banner { background: #4b0082; color: white; padding: 20px; text-align: center; }
-        .price-info { padding: 20px; font-size: 18px; }
-        .price-tag { color: #25D366; font-weight: bold; font-size: 24px; }
-        .back-btn { color: #4b0082; text-decoration: none; font-weight: bold; display: block; margin-bottom: 15px; }
+        .form-container { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        input, select { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box; }
+        .reg-btn { background: #25D366; color: white; border: none; width: 100%; padding: 15px; font-weight: bold; border-radius: 8px; cursor: pointer; }
+        .price-tag { color: #4b0082; font-weight: bold; }
     </style>
 </head>
 <body>
-    <a href="index.html" class="back-btn">← BACK TO HOME</a>
-    <div class="event-detail">
-        <div class="banner"><h2>🔥 NEXT EVENT: Summer Hit</h2><p>March 25, 2024</p></div>
-        <div class="price-info">
-            <p><strong>Early Bird Entry:</strong> <span class="price-tag">R150</span></p>
-            <p><strong>Standard Entry:</strong> <span class="price-tag">R200</span></p>
-            <p>Join us for a 3-hour non-stop HIIT and Step marathon!</p>
-        </div>
+    <a href="index.html" style="text-decoration:none; color:#4b0082;">← BACK</a>
+    <div class="form-container">
+        <h2>🔥 Register for Next Event</h2>
+        <p>Entry Fee: <span class="price-tag">R200</span></p>
+        <input type="text" id="name" placeholder="Full Name">
+        <input type="text" id="club" placeholder="Fitness Club Name">
+        <button class="reg-btn" onclick="sendReg()">REGISTER VIA WHATSAPP</button>
     </div>
+
+    <script>
+        function sendReg() {
+            const name = document.getElementById('name').value;
+            const club = document.getElementById('club').value;
+            const text = `Hi TFA! I want to register for the upcoming event.%0AName: ${name}%0AClub: ${club}`;
+            window.location.href = `https://wa.me/27620296345?text=${text}`;
+        }
+    </script>
 </body>
 </html>
