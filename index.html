@@ -17,24 +17,29 @@
         .b-left { padding: 10px 15px; color: #4b0082; background: white; }
         .b-right { padding: 10px 15px; color: white; background: #4b0082; }
 
-        /* 2. Header & Live Indicator */
-        .header-bein { background: linear-gradient(135deg, #4b0082, #1a0033); padding: 25px; border-bottom: 4px solid #25D366; position: relative; }
+        /* 2. Header */
+        .header-bein { background: linear-gradient(135deg, #4b0082, #1a0033); padding: 25px; border-bottom: 4px solid #25D366; position: relative; text-align: center; }
         .live-indicator { position: absolute; top: 15px; left: 15px; background: rgba(0,0,0,0.7); padding: 5px 12px; border-radius: 20px; font-size: 11px; font-weight: bold; border: 1px solid #25D366; }
         .red-dot { height: 8px; width: 8px; background-color: #ff0000; border-radius: 50%; display: inline-block; margin-right: 5px; animation: blink 1s infinite; }
         @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }
         
-        /* 3. Info Strips (Time & Price) */
-        .info-strip { background: #25D366; color: #000; padding: 10px; font-weight: 900; font-size: 14px; text-transform: uppercase; display: flex; justify-content: space-around; }
-        
-        /* 4. World Cup Card */
+        /* 3. World Cup Card */
         .world-cup-card { background: #1a1a1a; border: 2px solid #25D366; padding: 20px; margin: 20px auto; width: 90%; max-width: 500px; border-radius: 10px; text-align: center; }
         .btn-wa-worldcup { display: block; background: #4b0082; color: white; padding: 15px; text-decoration: none; font-weight: bold; border-radius: 5px; margin-top: 10px; border: 1px solid #25D366; }
 
-        /* 5. Instructor Grid (Supports up to 30) */
-        .container { padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .coach-card { background: #111; border: 1px solid #333; border-top: 5px solid #4b0082; padding: 20px; border-radius: 4px; text-align: left; }
-        .id-photo { width: 90px; height: 110px; border: 1px solid #444; float: left; margin-right: 15px; object-fit: cover; background: #222; }
-        .btn-wa { display: block; background: #25D366; color: #000; text-align: center; padding: 10px; text-decoration: none; font-weight: 900; clear: both; margin-top: 15px; border-radius: 4px; font-size: 13px; }
+        /* 4. Instructor Grid */
+        .container { padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+        .coach-card { background: #111; border: 1px solid #333; border-top: 5px solid #4b0082; padding: 20px; border-radius: 4px; position: relative; overflow: hidden; }
+        .id-photo { width: 90px; height: 110px; border: 1px solid #444; float: left; margin-right: 15px; object-fit: cover; }
+        
+        /* Info styling next to instructor */
+        .coach-details { overflow: hidden; }
+        .coach-details h3 { margin: 0; font-size: 18px; color: #fff; }
+        .coach-details p { margin: 3px 0; font-size: 12px; color: #ccc; }
+        .price-tag { color: #25D366; font-weight: bold; font-size: 14px; margin-top: 5px; display: block; }
+        .time-slot { background: #4b0082; font-size: 10px; padding: 2px 6px; border-radius: 3px; display: inline-block; margin-top: 5px; }
+
+        .btn-wa { display: block; background: #25D366; color: #000; text-align: center; padding: 12px; text-decoration: none; font-weight: 900; clear: both; margin-top: 15px; border-radius: 4px; }
     </style>
 </head>
 <body>
@@ -49,12 +54,7 @@
     <div id="main-content">
         <div class="header-bein">
             <div class="live-indicator"><span class="red-dot"></span> LIVE DASHBOARD</div>
-            <h1 style="text-align: center; margin: 0; font-size: 22px;">TOTAL FITNESS ACADEMY</h1>
-        </div>
-
-        <div class="info-strip">
-            <span>🕒 05:00 - 06:00 / 17:00 - 18:00</span>
-            <span>💰 R150 PER MONTH</span>
+            <h1 style="margin: 0; font-size: 22px;">TOTAL FITNESS ACADEMY</h1>
         </div>
 
         <div class="world-cup-card">
@@ -63,31 +63,40 @@
             <a href="https://wa.me/27620296345?text=I%20want%20to%20register%20for%20the%20World%20Cup" class="btn-wa-worldcup">REGISTER (COACH LUNGISA)</a>
         </div>
 
-        <h2 style="text-align: center; color: #4b0082; background: white; margin: 0; padding: 10px;">MEET THE INSTRUCTORS</h2>
-
         <div class="container">
             <div class="coach-card">
                 <img src="IMG_1538.png" class="id-photo">
-                <h3 style="margin:0;">COACH CBONZA</h3>
-                <p style="color:#25D366; font-size:12px; margin:5px 0;">📍 KwaMashu K Section</p>
+                <div class="coach-details">
+                    <h3>COACH CBONZA</h3>
+                    <p>📍 KwaMashu K Section</p>
+                    <span class="time-slot">🕒 05:00 - 06:00 / 17:00</span>
+                    <span class="price-tag">💰 R150 PM</span>
+                </div>
                 <a href="https://wa.me/27679818629" class="btn-wa">WHATSAPP COACH</a>
             </div>
 
             <div class="coach-card">
                 <img src="IMG_1539.png" class="id-photo">
-                <h3 style="margin:0;">COACH LUNGISA</h3>
-                <p style="color:#25D366; font-size:12px; margin:5px 0;">📍 KwaMashu E Section</p>
+                <div class="coach-details">
+                    <h3>COACH LUNGISA</h3>
+                    <p>📍 KwaMashu E Section</p>
+                    <span class="time-slot">🕒 05:00 - 06:00 / 17:00</span>
+                    <span class="price-tag">💰 R150 PM</span>
+                </div>
                 <a href="https://wa.me/27620296345" class="btn-wa">WHATSAPP COACH</a>
             </div>
 
             <div class="coach-card">
                 <img src="IMG_1540.png" class="id-photo">
-                <h3 style="margin:0;">COACH LINDA</h3>
-                <p style="color:#25D366; font-size:12px; margin:5px 0;">📍 Newlands West</p>
+                <div class="coach-details">
+                    <h3>COACH LINDA</h3>
+                    <p>📍 Newlands West</p>
+                    <span class="time-slot">🕒 17:00 - 18:00</span>
+                    <span class="price-tag">💰 R150 PM</span>
+                </div>
                 <a href="https://wa.me/27625600946" class="btn-wa">WHATSAPP COACH</a>
             </div>
-
-            </div>
+        </div>
     </div>
 
     <script>
