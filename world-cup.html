@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructors | TFA World Cup</title>
+    <style>
+        :root { --bein-purple: #4b0082; --bein-green: #25D366; --bein-font: 'Arial Narrow', sans-serif; }
+        body { background: #050505; color: white; font-family: 'Segoe UI', sans-serif; padding: 20px; padding-bottom: 80px; }
+        .back-btn { display: inline-block; color: white; background: var(--bein-purple); padding: 8px 15px; text-decoration: none; border-radius: 5px; font-weight: 900; margin-bottom: 20px; border: 1px solid var(--bein-green); font-family: var(--bein-font); }
+        .cat-title { font-family: var(--bein-font); font-size: 22px; color: var(--bein-green); margin: 30px 0 10px; text-transform: uppercase; border-left: 5px solid var(--bein-purple); padding-left: 12px; }
+        .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .card { background: #111; border-radius: 12px; padding: 12px; text-align: center; border: 1px solid #222; }
+        .photo-slot { width: 100%; aspect-ratio: 3/4; border-radius: 8px; background: #1a1a1a; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; color: #444; }
+        .name { font-family: var(--bein-font); font-size: 14px; font-weight: 900; text-transform: uppercase; margin-bottom: 8px; }
+        .btn-wa { background: var(--bein-green); color: black; font-size: 11px; padding: 8px; text-decoration: none; border-radius: 6px; font-weight: 900; display: block; font-family: var(--bein-font); }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-btn">← DASHBOARD</a>
+    <h1 style="font-family: var(--bein-font); color: #fff;">OFFICIAL LINE-UP</h1>
+    
+    <div class="cat-title">Hilo Instructors</div><div class="grid" id="hilo"></div>
+    <div class="cat-title">Functional Instructors</div><div class="grid" id="func"></div>
+    <div class="cat-title">Box Instructors</div><div class="grid" id="box"></div>
+    <div class="cat-title">Step Instructors - A</div><div class="grid" id="stepA"></div>
+    <div class="cat-title">Step Instructors - B</div><div class="grid" id="stepB"></div>
+
+    <script>
+        function fill(id, label) {
+            const g = document.getElementById(id);
+            for(let i=1; i<=6; i++) {
+                g.innerHTML += `<div class="card"><div class="photo-slot">TFA</div><div class="name">${label} ${i}</div><a href="https://wa.me/27620296345" class="btn-wa">BOOK SLOT</a></div>`;
+            }
+        }
+        fill('hilo', 'HILO'); fill('func', 'FUNC'); fill('box', 'BOX'); fill('stepA', 'STEP'); fill('stepB', 'STEP');
+    </script>
+</body>
+</html>
