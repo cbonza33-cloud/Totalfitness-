@@ -1,54 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TFA | Live News Room</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TFA News | Latest Updates</title>
     <style>
         :root { --bein-purple: #4b0082; --bein-green: #25D366; --bein-font: 'Arial Narrow', sans-serif; }
-        body { background: #f4f4f7; color: #1a1a1a; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; }
+        body { background: #f4f4f7; color: #1a1a1a; font-family: 'Segoe UI', sans-serif; margin: 0; padding-bottom: 120px; }
         
-        .back-btn { display: inline-block; color: white; background: var(--bein-purple); padding: 8px 15px; text-decoration: none; border-radius: 5px; font-weight: 900; margin-bottom: 20px; font-family: var(--bein-font); text-transform: uppercase; border: 1px solid var(--bein-green); }
-        
-        /* Live Stream Placeholder */
-        .live-stream-box { background: #000; width: 100%; aspect-ratio: 16 / 9; border-radius: 12px; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; border: 3px solid var(--bein-purple); margin-bottom: 20px; }
-        .live-overlay { position: absolute; top: 15px; left: 15px; background: red; color: white; padding: 5px 12px; font-weight: 900; border-radius: 4px; font-family: var(--bein-font); animation: blink 1s infinite; }
-        .stream-text { color: white; text-align: center; font-family: var(--bein-font); }
-        .stream-text h2 { margin: 0; font-size: 28px; color: var(--bein-green); }
-        
-        @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.2; } 100% { opacity: 1; } }
+        .header { background: white; padding: 15px; text-align: center; border-bottom: 2px solid var(--bein-purple); position: sticky; top: 0; z-index: 100; }
+        .header h1 { font-family: var(--bein-font); margin: 0; font-size: 24px; text-transform: uppercase; }
 
-        .news-card { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-left: 8px solid var(--bein-purple); }
-        .news-title { font-family: var(--bein-font); font-size: 26px; font-weight: 900; text-transform: uppercase; margin-bottom: 10px; color: #000; }
-        .highlight { color: var(--bein-purple); font-weight: 900; }
-        .btn-remind { background: #000; color: white; text-align: center; padding: 15px; text-decoration: none; border-radius: 8px; font-weight: 900; display: block; margin-top: 20px; font-family: var(--bein-font); text-transform: uppercase; }
+        /* Main Featured Story */
+        .featured-news { background: white; margin: 15px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .news-img { width: 100%; height: 220px; object-fit: cover; background: #000; }
+        .news-content { padding: 15px; }
+        .news-content span { color: var(--bein-purple); font-weight: 900; font-size: 12px; text-transform: uppercase; }
+        .news-content h2 { margin: 5px 0; font-family: var(--bein-font); font-size: 20px; }
+
+        /* Video Gallery Section */
+        .video-section { padding: 0 15px 20px; }
+        .video-scroll { display: flex; overflow-x: auto; gap: 12px; padding-bottom: 10px; scroll-snap-type: x mandatory; }
+        .video-card { min-width: 160px; aspect-ratio: 9/16; background: #000; border-radius: 12px; position: relative; scroll-snap-align: start; overflow: hidden; border: 2px solid var(--bein-purple); }
+        .video-card video { width: 100%; height: 100%; object-fit: cover; }
+        .video-label { position: absolute; bottom: 8px; left: 8px; color: white; font-size: 10px; font-weight: bold; background: rgba(0,0,0,0.6); padding: 2px 6px; border-radius: 4px; }
+
+        /* Training Highlights Grid */
+        .highlights-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 0 15px; }
+        .high-card { background: white; border-radius: 10px; overflow: hidden; font-size: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .high-img { width: 100%; aspect-ratio: 1/1; object-fit: cover; background: #eee; }
+        .high-info { padding: 8px; font-weight: bold; }
+
+        .bottom-nav { position: fixed; bottom: 0; width: 100%; background: white; display: flex; justify-content: space-around; padding: 15px 0; border-top: 1px solid #ddd; z-index: 1001; }
+        .nav-link { text-decoration: none; color: #666; font-size: 12px; font-weight: 900; font-family: var(--bein-font); text-transform: uppercase; }
     </style>
 </head>
 <body>
-    <a href="index.html" class="back-btn">← DASHBOARD</a>
 
-    <div class="live-stream-box">
-        <div class="live-overlay">● LIVE SIGNAL</div>
-        <div class="stream-text">
-            <h2>OFFICIAL BROADCAST</h2>
-            <p>COMMENCING JULY 25, 2026</p>
+    <div class="header"><h1>TFA NEWS FEED</h1></div>
+
+    <div class="featured-news">
+        <img src="IMG_1543.jpeg" class="news-img">
+        <div class="news-content">
+            <span>Official Update 🏆</span>
+            <h2>30 Instructors Confirmed!</h2>
+            <p style="font-size: 14px; color: #555;">The stage is set for July 25 at KwaMashu L Hall. Don't miss the biggest fitness event of the year.</p>
         </div>
     </div>
 
-    <div class="news-card">
-        <div class="news-title">Broadcast Schedule Confirmed</div>
-        <p>TFA Yomphakathi is proud to announce the official live coverage of the <span class="highlight">WORLD CUP OF AEROBICS</span>.</p>
-        
-        <p>Members who cannot attend the <strong>KwaMashu L Community Hall</strong> can watch the full instructor battles live right here on this channel.</p>
-
-        <div style="background: #f0f0f0; padding: 15px; border-radius: 8px; margin-top: 15px; font-size: 14px;">
-            <strong>UPCOMING BROADCASTS:</strong><br>
-            📅 July 25: Masterclass Battle (10:00 AM)<br>
-            📅 July 25: Team Sync Finals (04:00 PM)
+    <div style="padding: 0 15px 10px; font-weight: 900; font-family: var(--bein-font);">🔥 TRAINING CLIPS</div>
+    <div class="video-section">
+        <div class="video-scroll">
+            <div class="video-card">
+                <video muted loop playsinline onclick="this.paused ? this.play() : this.pause()">
+                    <source src="db201ad6-b4ad-4aa3-8b3b-1763f84d4be1.mp4" type="video/mp4">
+                </video>
+                <div class="video-label">Coach Cbonza - Hi-Lo</div>
+            </div>
+            <div class="video-card">
+                <video muted loop playsinline onclick="this.paused ? this.play() : this.pause()">
+                    <source src="db201ad6-b4ad-4aa3-8b3b-1763f84d4be1.mp4" type="video/mp4">
+                </video>
+                <div class="video-label">Coach Lungisa - Func</div>
+            </div>
+            <div class="video-card">
+                <video muted loop playsinline onclick="this.paused ? this.play() : this.pause()">
+                    <source src="db201ad6-b4ad-4aa3-8b3b-1763f84d4be1.mp4" type="video/mp4">
+                </video>
+                <div class="video-label">Coach Linda - Step</div>
+            </div>
         </div>
-        
-        <a href="https://wa.me/27620296345?text=Notify%20me%20when%20the%20TFA%20Live%20Stream%20starts" class="btn-remind">GET BROADCAST NOTIFICATION</a>
+        <p style="font-size: 10px; color: #888; margin-top: 5px;">Tap to play video clips</p>
     </div>
 
-    <p style="text-align: center; margin-top: 30px; font-family: var(--bein-font); font-weight: 900; color: #888;">TFA BROADCAST NETWORK © 2026</p>
+    <div style="padding: 0 15px 10px; font-weight: 900; font-family: var(--bein-font);">📸 TRAINING GALLERY</div>
+    <div class="highlights-grid">
+        <div class="high-card">
+            <img src="IMG_1538.png" class="high-img">
+            <div class="high-info">K-Section Session</div>
+        </div>
+        <div class="high-card">
+            <img src="IMG_1539.png" class="high-img">
+            <div class="high-info">E-Section Power</div>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-link">HOME</a>
+        <a href="world-cup.html" class="nav-link">EVENTS</a>
+        <a href="news.html" class="nav-link" style="color:var(--bein-purple)">NEWS</a>
+        <a href="music.html" class="nav-link">MUSIC</a>
+    </nav>
+
 </body>
 </html>
