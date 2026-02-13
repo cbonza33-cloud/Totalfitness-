@@ -2,46 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>World Cup Of Aerobics | TFA</title>
+    <title>World Cup Instructors | TFA</title>
     <style>
-        body { background: #050505; color: white; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; }
-        .back-btn { display: inline-block; color: white; background: #4b0082; padding: 8px 15px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-bottom: 20px; border: 1px solid #25D366; }
-        .event-card { border: 2px solid #25D366; padding: 20px; border-radius: 15px; background: #111; }
-        .price-hero { font-size: 40px; color: #25D366; font-weight: 900; margin: 10px 0; }
-        .detail-row { margin: 15px 0; padding-bottom: 10px; border-bottom: 1px solid #333; }
-        h1 { color: #25D366; text-transform: uppercase; font-size: 24px; }
+        :root { --bein-purple: #4b0082; --bein-green: #25D366; --bein-font: 'Arial Narrow', sans-serif; }
+        body { background: #050505; color: white; font-family: 'Segoe UI', sans-serif; padding: 20px; }
+        .back-btn { display: inline-block; color: white; background: var(--bein-purple); padding: 8px 15px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-bottom: 20px; border: 1px solid var(--bein-green); }
+        .section-title { font-family: var(--bein-font); font-size: 24px; font-weight: 900; color: var(--bein-green); margin-bottom: 20px; text-transform: uppercase; }
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 15px; }
+        .coach-card { background: #111; border-radius: 12px; padding: 15px; border: 1px solid #333; }
+        .coach-top { display: flex; gap: 15px; }
+        .id-photo { width: 85px; height: 105px; border-radius: 8px; object-fit: cover; background: #222; }
+        .btn-wa { background: var(--bein-green); color: black; text-align: center; padding: 10px; text-decoration: none; border-radius: 8px; font-weight: 900; display: block; margin-top: 10px; font-family: var(--bein-font); }
     </style>
 </head>
 <body>
     <a href="index.html" class="back-btn">← DASHBOARD</a>
-    <div class="event-card">
-        <h1>🏆 WORLD CUP OF AEROBICS</h1>
-        <p>The ultimate flagship competition of Total Fitness Academy.</p>
-        
-        <div class="price-hero">R300</div>
-        <p>ENTRY TICKET PRICE</p>
+    <h1 class="section-title">30 GUEST INSTRUCTORS</h1>
+    <div class="grid-container" id="coach-grid"></div>
 
-        <div class="detail-row">
-            <strong>📍 VENUE</strong><br>
-            KwaMashu L Community Hall
-        </div>
-
-        <div class="detail-row">
-            <strong>🕒 TIME</strong><br>
-            08:00 AM - 20:00 PM
-        </div>
-
-        <div class="detail-row">
-            <strong>🔥 COMPETITION CATEGORIES</strong>
-            <ul style="padding-left: 20px;">
-                <li>Solo Endurance Performance</li>
-                <li>Team Sync Choreography</li>
-                <li>HIIT Speed Challenge</li>
-                <li>Instructor Masterclass Battle</li>
-            </ul>
-        </div>
-        
-        <a href="https://wa.me/27620296345?text=I%20want%20to%20buy%20a%20World%20Cup%20Ticket" style="display: block; background: #25D366; color: #000; text-align: center; padding: 15px; text-decoration: none; font-weight: 900; border-radius: 8px; margin-top: 20px;">BOOK YOUR TICKET</a>
-    </div>
+    <script>
+        const grid = document.getElementById('coach-grid');
+        const coaches = [
+            {name:"COACH CBONZA",loc:"K Section",wa:"27679818629",img:"IMG_1538.png"},
+            {name:"COACH LUNGISA",loc:"E Section",wa:"27620296345",img:"IMG_1539.png"},
+            {name:"COACH LINDA",loc:"Newlands",wa:"27625600946",img:"IMG_1540.png"}
+        ];
+        coaches.forEach(c => {
+            grid.innerHTML += `<div class="coach-card"><div class="coach-top"><img src="${c.img}" class="id-photo"><div><h3 style="margin:0">${c.name}</h3><p style="color:#888; font-size:14px">📍 ${c.loc}</p></div></div><a href="https://wa.me/${c.wa}" class="btn-wa">CONNECT ON WHATSAPP</a></div>`;
+        });
+        for(let i = 4; i <= 30; i++) {
+            grid.innerHTML += `<div class="coach-card" style="opacity:0.3"><div class="coach-top"><div class="id-photo" style="display:flex;align-items:center;justify-content:center;">?</div><div><h3 style="margin:0">INSTRUCTOR ${i}</h3><p style="font-size:14px">📍 TBC</p></div></div><a href="#" class="btn-wa" style="background:#444; color:#888">SLOT OPEN</a></div>`;
+        }
+    </script>
 </body>
 </html>
