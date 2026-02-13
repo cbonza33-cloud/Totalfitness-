@@ -7,56 +7,44 @@
     <style>
         :root { --bein-purple: #4b0082; --bein-green: #25D366; --bein-font: 'Arial Narrow', sans-serif; }
         body { background: #f4f4f7; color: #1a1a1a; font-family: 'Segoe UI', sans-serif; margin: 0; padding-bottom: 120px; overflow-x: hidden; }
-        
-        /* 3s Startup Intro */
         #startup { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: #ffffff; display: flex; justify-content: center; align-items: center; z-index: 9999; transition: opacity 0.8s ease; }
-        
-        /* Countdown Bar */
         .countdown-bar { background: #000; color: white; padding: 8px; display: flex; justify-content: center; align-items: center; gap: 10px; font-family: var(--bein-font); font-weight: bold; border-bottom: 2px solid var(--bein-purple); font-size: 13px; }
         .red-light { width: 10px; height: 10px; background: red; border-radius: 50%; box-shadow: 0 0 8px red; animation: flicker 0.6s infinite alternate; }
         @keyframes flicker { from { opacity: 1; } to { opacity: 0.2; } }
-
-        /* Header */
         .bein-header { background: #ffffff; padding: 10px; display: flex; justify-content: center; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
         .bein-logo-box { display: flex; font-family: var(--bein-font); font-size: 18px; font-weight: 900; border: 2px solid var(--bein-purple); border-radius: 5px; overflow: hidden; text-transform: uppercase; }
         .logo-t { padding: 4px 12px; color: var(--bein-purple); background: white; }
         .logo-a { padding: 4px 12px; color: white; background: var(--bein-purple); }
-
-        /* Navigation Scroller */
         .league-scroller { display: flex; overflow-x: auto; padding: 15px 10px; background: white; gap: 20px; border-bottom: 1px solid #eee; }
         .league-item { min-width: 75px; text-align: center; font-size: 10px; font-weight: 900; color: #444; text-decoration: none; font-family: var(--bein-font); text-transform: uppercase; }
         .league-icon { width: 45px; height: 45px; background: #eee; border-radius: 50%; margin-bottom: 5px; display: flex; align-items: center; justify-content: center; font-size: 20px; border: 1px solid #ddd; }
-
-        /* Video Hero */
         .video-hero { width: 100%; aspect-ratio: 16 / 9; background: #000; position: relative; border-bottom: 3px solid var(--bein-green); }
         .video-hero video { width: 100%; height: 100%; object-fit: cover; }
-
-        /* Headline Image Slider */
         .headline-slider { width: 100%; height: 220px; background: #000; overflow: hidden; position: relative; border-bottom: 3px solid var(--bein-purple); }
         .slide { position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 1s ease-in-out; background-size: cover; background-position: center; display: flex; align-items: flex-end; }
         .slide.active { opacity: 1; }
         .slide-content { background: linear-gradient(transparent, rgba(0,0,0,0.9)); padding: 20px; color: white; width: 100%; }
         .slide h2 { font-family: var(--bein-font); font-size: 26px; margin: 0; color: var(--bein-green); text-transform: uppercase; }
+        
+        /* Coach Grid Styling */
+        .coach-grid { padding: 15px; display: grid; grid-template-columns: 1fr; gap: 15px; }
+        .coach-card { background: white; border-radius: 12px; padding: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); display: flex; gap: 15px; align-items: center; }
+        .coach-img { width: 70px; height: 90px; border-radius: 8px; object-fit: cover; background: #eee; }
+        .btn-wa { background: var(--bein-green); color: black; padding: 8px 12px; text-decoration: none; border-radius: 5px; font-weight: 900; font-size: 12px; margin-top: 5px; display: inline-block; font-family: var(--bein-font); }
 
-        /* Price Ticker Bottom */
+        .price-banner { background: #fff; margin: 10px 15px; padding: 15px; border-radius: 10px; border-left: 5px solid var(--bein-green); }
+
         .ticker-wrap { position: fixed; bottom: 55px; width: 100%; overflow: hidden; background: var(--bein-purple); color: white; height: 30px; display: flex; align-items: center; z-index: 1000; font-family: var(--bein-font); font-weight: bold; text-transform: uppercase; font-size: 12px; }
         .ticker-move { display: flex; white-space: nowrap; animation: ticker 25s linear infinite; }
         .ticker-item { padding: 0 20px; border-right: 2px solid var(--bein-green); }
         @keyframes ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
-
-        /* Bottom Nav */
         .bottom-nav { position: fixed; bottom: 0; width: 100%; background: white; display: flex; justify-content: space-around; padding: 10px 0; border-top: 1px solid #ddd; z-index: 1001; }
         .nav-link { text-align: center; text-decoration: none; color: #666; font-size: 10px; font-weight: 900; font-family: var(--bein-font); text-transform: uppercase; }
-        .nav-link.active { color: var(--bein-purple); }
     </style>
 </head>
 <body>
 
-    <div id="startup">
-        <div class="bein-logo-box" style="font-size: 28px;">
-            <div class="logo-t">TFA</div><div class="logo-a">YOMPHAKATHI</div>
-        </div>
-    </div>
+    <div id="startup"><div class="bein-logo-box" style="font-size: 28px;"><div class="logo-t">TFA</div><div class="logo-a">YOMPHAKATHI</div></div></div>
 
     <div class="countdown-bar">
         <div class="red-light"></div>
@@ -78,34 +66,61 @@
     </div>
 
     <div class="video-hero">
-        <video autoplay muted loop playsinline webkit-playsinline>
-            <source src="db201ad6-b4ad-4aa3-8b3b-1763f84d4be1.mp4" type="video/mp4">
-        </video>
+        <video autoplay muted loop playsinline webkit-playsinline><source src="db201ad6-b4ad-4aa3-8b3b-1763f84d4be1.mp4" type="video/mp4"></video>
     </div>
 
     <div class="headline-slider">
-        <div class="slide active" style="background-image: url('PHOTO_1.jpg');">
-            <div class="slide-content"><h2>JULY 25 WORLD CUP</h2><p>R300 Tickets Available Now</p></div>
+        <div class="slide active" style="background-image: url('IMG_1543.jpeg');">
+            <div class="slide-content"><h2>JULY 25 WORLD CUP</h2><p>KwaMashu L Community Hall</p></div>
         </div>
-        <div class="slide" style="background-image: url('PHOTO_2.jpg');">
-            <div class="slide-content"><h2>KWAMASHU L HALL</h2><p>Official Venue Confirmed</p></div>
+        <div class="slide" style="background-image: url('IMG_1538.png');">
+            <div class="slide-content"><h2>EARLY BIRD SPECIAL</h2><p>R250 Throughout June!</p></div>
         </div>
-        <div class="slide" style="background-image: url('PHOTO_3.jpg');">
-            <div class="slide-content"><h2>30 TOP INSTRUCTORS</h2><p>See the full line-up in Events</p></div>
+    </div>
+
+    <div class="price-banner">
+        <strong style="color:var(--bein-purple)">TICKET PRICES:</strong><br>
+        🎟️ Standard: <b>R300</b><br>
+        🔥 Early Bird (June): <b>R250</b>
+    </div>
+
+    <div class="coach-grid">
+        <div class="coach-card">
+            <img src="IMG_1538.png" class="coach-img">
+            <div>
+                <b style="font-family: var(--bein-font);">COACH CBONZA</b><br>
+                <small>📍 KwaMashu K Section</small><br>
+                <a href="https://wa.me/27679818629" class="btn-wa">WHATSAPP</a>
+            </div>
+        </div>
+        <div class="coach-card">
+            <img src="IMG_1539.png" class="coach-img">
+            <div>
+                <b style="font-family: var(--bein-font);">COACH LUNGISA</b><br>
+                <small>📍 KwaMashu E Section</small><br>
+                <a href="https://wa.me/27620296345" class="btn-wa">WHATSAPP</a>
+            </div>
+        </div>
+        <div class="coach-card">
+            <img src="IMG_1540.png" class="coach-img">
+            <div>
+                <b style="font-family: var(--bein-font);">COACH LINDA</b><br>
+                <small>📍 Newlands West</small><br>
+                <a href="https://wa.me/27625600946" class="btn-wa">WHATSAPP</a>
+            </div>
         </div>
     </div>
 
     <div class="ticker-wrap">
         <div class="ticker-move">
             <div class="ticker-item">WORLD CUP TICKET: R300</div>
-            <div class="ticker-item">VENUE: KWAMASHU L COMMUNITY HALL</div>
+            <div class="ticker-item">EARLY BIRD JUNE: R250</div>
             <div class="ticker-item">DATE: JULY 25, 2026</div>
-            <div class="ticker-item">30 INSTRUCTORS HEAD-TO-HEAD</div>
         </div>
     </div>
 
     <nav class="bottom-nav">
-        <a href="index.html" class="nav-link active">Home</a>
+        <a href="index.html" class="nav-link" style="color:var(--bein-purple)">Home</a>
         <a href="world-cup.html" class="nav-link">Events</a>
         <a href="news.html" class="nav-link">News</a>
         <a href="upcoming.html" class="nav-link">Upcoming</a>
@@ -113,35 +128,15 @@
     </nav>
 
     <script>
-        // Intro Screen removal after 3s
-        setTimeout(() => {
-            const startup = document.getElementById('startup');
-            if(startup) {
-                startup.style.opacity = '0';
-                setTimeout(() => { startup.style.display = 'none'; }, 800);
-            }
-        }, 3000);
-
-        // July 25th Countdown
+        setTimeout(() => { document.getElementById('startup').style.opacity = '0'; setTimeout(() => { document.getElementById('startup').style.display = 'none'; }, 800); }, 3000);
         const targetDate = new Date("July 25, 2026 08:00:00").getTime();
         setInterval(() => {
-            const now = new Date().getTime();
-            const diff = targetDate - now;
-            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const s = Math.floor((diff % (1000 * 60)) / 1000);
+            const diff = targetDate - new Date().getTime();
+            const d = Math.floor(diff / (1000 * 60 * 60 * 24)), h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)), m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)), s = Math.floor((diff % (1000 * 60)) / 1000);
             document.getElementById("timer").innerHTML = `${d}d : ${h}h : ${m}m : ${s}s`;
         }, 1000);
-
-        // Headline Auto-Slider
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-        setInterval(() => {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (currentSlide + 1) % slides.length;
-            slides[currentSlide].classList.add('active');
-        }, 4000);
+        let currentSlide = 0; const slides = document.querySelectorAll('.slide');
+        setInterval(() => { slides[currentSlide].classList.remove('active'); currentSlide = (currentSlide + 1) % slides.length; slides[currentSlide].classList.add('active'); }, 4000);
     </script>
 </body>
 </html>
