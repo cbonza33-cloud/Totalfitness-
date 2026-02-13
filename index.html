@@ -14,7 +14,6 @@
         .red-light { width: 10px; height: 10px; background: red; border-radius: 50%; box-shadow: 0 0 8px red; animation: flicker 0.6s infinite alternate; }
         @keyframes flicker { from { opacity: 1; } to { opacity: 0.2; } }
 
-        /* Restored TFA Branding */
         .bein-header { background: #ffffff; padding: 10px; display: flex; justify-content: center; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
         .bein-logo-box { display: flex; font-family: var(--bein-font); font-size: 18px; font-weight: 900; border: 2px solid var(--bein-purple); border-radius: 5px; overflow: hidden; text-transform: uppercase; }
         .logo-t { padding: 4px 12px; color: var(--bein-purple); background: white; }
@@ -32,7 +31,10 @@
         .price-card { background: white; margin: 15px; padding: 20px; border-radius: 12px; border-left: 6px solid var(--bein-purple); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         .price-row { display: flex; justify-content: space-between; align-items: center; font-family: var(--bein-font); font-weight: 900; font-size: 18px; margin-bottom: 15px; }
         .price-val { color: var(--bein-purple); font-size: 24px; }
-        .buy-btn { display: block; width: 100%; background: var(--bein-purple); color: white; text-align: center; padding: 12px; text-decoration: none; border-radius: 8px; font-family: var(--bein-font); font-weight: 900; font-size: 18px; text-transform: uppercase; }
+        .buy-btn { display: block; width: 100%; background: var(--bein-purple); color: white; text-align: center; padding: 12px; text-decoration: none; border-radius: 8px; font-family: var(--bein-font); font-weight: 900; font-size: 16px; text-transform: uppercase; margin-bottom: 10px; }
+        
+        /* Share Button */
+        .share-btn { display: block; width: 100%; background: var(--bein-green); color: black; text-align: center; padding: 10px; text-decoration: none; border-radius: 8px; font-family: var(--bein-font); font-weight: 900; font-size: 14px; text-transform: uppercase; border: 1px solid #1aa34a; }
 
         .coach-grid { padding: 15px; display: grid; grid-template-columns: 1fr; gap: 15px; }
         .coach-card { background: white; border-radius: 12px; padding: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); display: flex; gap: 15px; align-items: center; border: 1px solid #eee; }
@@ -79,6 +81,7 @@
     <div class="price-card">
         <div class="price-row"><span>WORLD CUP TICKET</span> <span class="price-val">R300</span></div>
         <a href="world-cup.html" class="buy-btn">🛒 BUY TICKET / VIEW LINE-UP</a>
+        <a href="whatsapp://send?text=Check out the TFA World Cup on July 25! View the line-up and get tickets here: https://cbonza33-cloud.github.io/Totalfitness-/index.html" class="share-btn">📲 SHARE VIA WHATSAPP</a>
     </div>
 
     <div class="coach-grid">
